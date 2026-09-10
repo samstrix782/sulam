@@ -216,7 +216,7 @@ const S = {
   user:{first:'',last:'',email:''},
   token:'', analysis:null, submitted:false,
   openValue:null, partyId:null, returnTo:null, sort:'match',
-  adminParty:null, busy:false, msg:''
+  adminParty:null, adminKey:'', busy:false, msg:''
 };
 
 const $ = (h)=>{const t=document.createElement('template');t.innerHTML=h.trim();return t.content.firstChild;};
@@ -262,6 +262,7 @@ async function load(){
   S.token = store.get('token') || '';
   S.analysis = store.get('analysis') || null;
   S.submitted = !!store.get('submitted');
+  S.adminKey = store.get('adminKey') || '';
   applyHash();
   window.addEventListener('hashchange', ()=>{ applyHash(); render(); });
   render();
@@ -987,6 +988,8 @@ async function recallByToken(token){
 
 /* ---------- admin ---------- */
 function renderAdmin(app){
+  // מול שרת, תיוג דורש מפתח. במצב מקומי אין למי לכתוב, אז אין מה לנעול.
+  if(CONFIG.endpoint && !S.adminKey){ app.append(adminGate()); return; }
   const parties=S.p.parties;
   if(!S.adminParty) S.adminParty=parties[0].id;
   const party=parties.find(p=>p.id===S.adminParty);
@@ -1075,7 +1078,8 @@ function renderAdmin(app){
     store.set('parties', S.p);
     if(CONFIG.endpoint){ const tt=party.tags[q.id];
       fetch(CONFIG.endpoint,{method:'POST',headers:{'Content-Type':'text/plain'},
-        body:JSON.stringify({action:'tag',party_id:party.id,q_id:q.id,level:tt.level,principled:tt.principled,note:tt.note,link:tt.link})}).catch(()=>{});
+        body:JSON.stringify({action:'tag',key:S.adminKey,party_id:party.id,q_id:q.id,level:tt.level,principled:tt.principled,note:tt.note,link:tt.link})})
+        .then(r=>r.json()).then(j=>{ if(j && j.error) adminKeyFailed(j.error); }).catch(()=>{});
     }
   };
   const grab=()=>{ const n=main.querySelector('#note'), l=main.querySelector('#link');
@@ -1090,6 +1094,41 @@ function renderAdmin(app){
   main.querySelector('#prev').onclick=()=>{ grab(); adminStep(-1); };
   main.querySelector('#clear').onclick=()=>{ delete party.tags[q.id]; store.set('parties',S.p); adminStep(1); };
   app.append(main);
+}
+function adminGate(){
+  const el=$(`<main>
+    <div class="pad" style="padding-top:calc(40px + env(safe-area-inset-top))">
+      <div class="label" style="margin-bottom:9px">מסך התיוג</div>
+      <h1>מפתח התיוג</h1>
+      <p class="lead" style="margin-top:12px">הכתובת הזאת פתוחה לכל מי שמגיע אליה, אז כתיבת תיוג דורשת מפתח. הוא נשמר במכשיר הזה ולא תישאל שוב.</p>
+      <div class="field" style="margin-top:22px"><label for="ak">המפתח</label>
+        <input id="ak" type="password" autocomplete="off" dir="ltr"></div>
+      <p class="err" id="akerr">${esc(S.msg||'')}</p>
+      <div class="stack" style="gap:10px;margin-top:14px">
+        <button class="btn primary" id="ok">להיכנס</button>
+        <button class="btn ghost" id="back">חזרה לשאלון</button>
+      </div>
+    </div>
+  </main>`);
+  el.querySelector('#back').onclick=()=>{ S.msg=''; location.hash=''; };
+  el.querySelector('#ok').onclick=async()=>{
+    const v=el.querySelector('#ak').value.trim(); const err=el.querySelector('#akerr');
+    if(!v){ err.textContent='צריך מפתח.'; return; }
+    const b=el.querySelector('#ok'); b.disabled=true; err.textContent='בודק…';
+    try{
+      const r=await fetch(CONFIG.endpoint,{method:'POST',headers:{'Content-Type':'text/plain'},
+        body:JSON.stringify({action:'admin_check', key:v})});
+      const j=await r.json();
+      if(j.error){ err.textContent=j.error; b.disabled=false; return; }
+      S.adminKey=v; store.set('adminKey',v); S.msg=''; render();
+    }catch(e){ err.textContent='הבדיקה נכשלה: '+e.message; b.disabled=false; }
+  };
+  return el;
+}
+function adminKeyFailed(msg){
+  S.adminKey=''; store.set('adminKey','');
+  S.msg = msg + ' — התיוג לא נשמר בגיליון.';
+  render();
 }
 function adminStep(dir){
   const v=S.q.values[S.vi];
