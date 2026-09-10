@@ -216,7 +216,7 @@ const S = {
   user:{first:'',last:'',email:''},
   token:'', analysis:null, submitted:false,
   openValue:null, partyId:null, returnTo:null, sort:'match',
-  adminParty:null, adminKey:'', busy:false, msg:''
+  adminParty:null, adminKey:'', adminLock:null, busy:false, msg:''
 };
 
 const $ = (h)=>{const t=document.createElement('template');t.innerHTML=h.trim();return t.content.firstChild;};
@@ -988,8 +988,14 @@ async function recallByToken(token){
 
 /* ---------- admin ---------- */
 function renderAdmin(app){
-  // מול שרת, תיוג דורש מפתח. במצב מקומי אין למי לכתוב, אז אין מה לנעול.
-  if(CONFIG.endpoint && !S.adminKey){ app.append(adminGate()); return; }
+  // במצב מקומי אין למי לכתוב, אז אין מה לנעול. מול שרת — שואלים אותו פעם אחת
+  // אם הוא בכלל אוכף מפתח, במקום להניח. פריסה ישנה לא מכירה admin_check.
+  if(CONFIG.endpoint && S.adminLock===null){
+    app.append($('<main class="pad" style="padding-top:60px"><p class="lead">בודק את הגדרות התיוג…</p></main>'));
+    probeAdminLock();
+    return;
+  }
+  if(CONFIG.endpoint && S.adminLock && !S.adminKey){ app.append(adminGate()); return; }
   const parties=S.p.parties;
   if(!S.adminParty) S.adminParty=parties[0].id;
   const party=parties.find(p=>p.id===S.adminParty);
@@ -1095,6 +1101,16 @@ function renderAdmin(app){
   main.querySelector('#clear').onclick=()=>{ delete party.tags[q.id]; store.set('parties',S.p); adminStep(1); };
   app.append(main);
 }
+async function probeAdminLock(){
+  let lock=false;
+  try{
+    const r=await fetch(CONFIG.endpoint,{method:'POST',headers:{'Content-Type':'text/plain'},
+      body:JSON.stringify({action:'admin_check', key:''})});
+    const j=await r.json();
+    lock = !(j && j.error==='unknown action');   // השרת מכיר את הפעולה => הוא אוכף
+  }catch(e){ lock=false; }
+  S.adminLock=lock; render();
+}
 function adminGate(){
   const el=$(`<main>
     <div class="pad" style="padding-top:calc(40px + env(safe-area-inset-top))">
@@ -1126,7 +1142,7 @@ function adminGate(){
   return el;
 }
 function adminKeyFailed(msg){
-  S.adminKey=''; store.set('adminKey','');
+  S.adminLock=true; S.adminKey=''; store.set('adminKey','');
   S.msg = msg + ' — התיוג לא נשמר בגיליון.';
   render();
 }
