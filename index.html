@@ -214,7 +214,7 @@ const S = {
   screen:'intro', vi:0, qi:0,
   answers:{},                              // qid -> {level, principled}
   user:{first:'',last:'',email:''},
-  token:'', analysis:null, submitted:false,
+  token:'', analysis:null, mailPending:false, submitted:false,
   openValue:null, partyId:null, returnTo:null, sort:'match',
   adminParty:null, adminKey:'', adminLock:null, busy:false, msg:''
 };
@@ -261,6 +261,7 @@ async function load(){
   S.user = Object.assign({first:'',last:'',email:''}, store.get('user') || {});
   S.token = store.get('token') || '';
   S.analysis = store.get('analysis') || null;
+  S.mailPending = !!store.get('mailPending');
   S.submitted = !!store.get('submitted');
   S.adminKey = store.get('adminKey') || '';
   applyHash();
@@ -415,7 +416,8 @@ function introView(){
   const mine=el.querySelector('#mine'); if(mine) mine.onclick=()=>{ S.screen='results'; render(); };
   const rs=el.querySelector('#reset'); if(rs) rs.onclick=()=>{
     if(!confirm('למחוק את כל התשובות ולהתחיל טופס חדש?')) return;
-    S.answers={}; S.analysis=null; S.submitted=false; S.token='';
+    S.answers={}; S.analysis=null; S.mailPending=false; S.submitted=false; S.token='';
+    store.set('mailPending',false);
     store.set('answers',{}); store.set('analysis',null); store.set('submitted',false); store.set('token','');
     S.screen='intro'; render();
   };
@@ -640,6 +642,9 @@ function submitView(){
         <span class="line-field ${u.email?'filled':''}"><input id="email" type="email" inputmode="email" autocomplete="email" dir="ltr" placeholder="name@example.com" value="${esc(u.email)}"></span>
         <div class="row" style="gap:6px;margin-top:5px"><span class="small">דואר אלקטרוני</span><span class="small" style="color:var(--line)">— המפתח שלך</span></div>
         <p class="small" style="margin:7px 0 0">איתו תחזור להמלצה מכל מכשיר, ואיתו תעדכן תשובות בלי לפתוח טופס חדש. בלי דיוור ובלי העברה לאף אחד.</p>
+        ${CONFIG.endpoint?`<label class="row" style="gap:9px;margin-top:12px;align-items:flex-start;cursor:pointer">
+          <input type="checkbox" id="mailme" ${S.user.mail?'checked':''} style="width:18px;height:18px;margin:2px 0 0;flex:0 0 18px;accent-color:var(--ink)">
+          <span class="small" style="color:var(--ink-soft)">לשלוח לי את הניתוח המילולי גם למייל — הודעה אחת, עם קישור אישי למגש</span></label>`:''}
       </div>
       <div class="row" style="margin-top:16px;padding-top:12px;border-top:1px dashed var(--rule);gap:7px">
         <span style="color:var(--line)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 8h14"/></svg></span>
@@ -690,6 +695,7 @@ function submitView(){
       const r=await submitAnswers();
       S.submitted=true; store.set('submitted',true);
       S.analysis=r.analysis||null; store.set('analysis',S.analysis);
+      S.mailPending=!!r.mail_pending; store.set('mailPending',S.mailPending);
       if(r.token){ S.token=r.token; store.set('token',r.token); }
       S.screen='results'; render();
     }catch(e){
@@ -706,9 +712,11 @@ function submitView(){
   return el;
 }
 function readIdentity(el){
+  const mm = el.querySelector('#mailme');
   return { first: el.querySelector('#first').value.trim(),
            last:  el.querySelector('#last').value.trim(),
-           email: el.querySelector('#email').value.trim() };
+           email: el.querySelector('#email').value.trim(),
+           mail:  mm ? mm.checked : false };
 }
 async function submitAnswers(){
   const qs=allQ();
@@ -718,15 +726,15 @@ async function submitAnswers(){
     profile:{ answered:answered(), total:qs.length,
       redlines_by_value:Object.fromEntries(S.q.values.map(v=>[v.name, v.questions.filter(q=>S.answers[q.id]&&S.answers[q.id].principled).length])) },
     parties:cands.map(({p,s})=>({ name:p.name, letters:p.letters||'', leader:p.leader, match_pct:s.pct, components:p.components,
-      user_redlines_crossed:s.redlines.map(r=>({value:r.q.value.name,question:r.q.title,user:r.a.level+' — '+(r.q.rungs.find(x=>x.level===r.a.level)||{}).text,party:r.t.level+' — '+(r.q.rungs.find(x=>x.level===r.t.level)||{}).text,party_note:r.t.note})),
-      party_principles_user_far_from:s.theirs.map(r=>({value:r.q.value.name,question:r.q.title,user:r.a.level,party:r.t.level+' — '+(r.q.rungs.find(x=>x.level===r.t.level)||{}).text,party_note:r.t.note})),
+      user_redlines_crossed:s.redlines.map(r=>({value:r.q.value.name,question:r.q.title,user:r.a.level+' — '+(r.q.rungs.find(x=>x.level===r.a.level)||{}).text,party:r.t.level+' — '+(r.q.rungs.find(x=>x.level===r.t.level)||{}).text,party_note:r.t.note,estimate:r.t.source==='estimate'})),
+      party_principles_user_far_from:s.theirs.map(r=>({value:r.q.value.name,question:r.q.title,user:r.a.level,party:r.t.level+' — '+(r.q.rungs.find(x=>x.level===r.t.level)||{}).text,party_note:r.t.note,estimate:r.t.source==='estimate'})),
       agreements:qs.filter(q=>S.answers[q.id]&&S.answers[q.id].level&&p.tags[q.id]&&p.tags[q.id].level&&Math.abs(S.answers[q.id].level-p.tags[q.id].level)<=1&&(S.answers[q.id].principled||p.tags[q.id].principled))
-        .map(q=>({value:q.value.name,question:q.title,user:S.answers[q.id].level,party:p.tags[q.id].level,user_redline:!!S.answers[q.id].principled,party_principle:!!p.tags[q.id].principled,party_note:p.tags[q.id].note})),
+        .map(q=>({value:q.value.name,question:q.title,user:S.answers[q.id].level,party:p.tags[q.id].level,user_redline:!!S.answers[q.id].principled,party_principle:!!p.tags[q.id].principled,party_note:p.tags[q.id].note,estimate:p.tags[q.id].source==='estimate'})),
       by_value:Object.fromEntries(S.q.values.map(v=>[v.name, s.byValue[v.id]?s.byValue[v.id].pct:null])) })),
   };
   const scores=Object.fromEntries(rows.map(r=>[r.p.id, r.s.pct]));
   const res=await fetch(CONFIG.endpoint,{method:'POST',headers:{'Content-Type':'text/plain'},
-    body:JSON.stringify({action:'submit',name:fullName(),email:S.user.email,token:S.token||'',answers:S.answers,qids:qs.map(q=>q.id),scores,packet})});
+    body:JSON.stringify({action:'submit',name:fullName(),email:S.user.email,mail:!!S.user.mail,token:S.token||'',answers:S.answers,qids:qs.map(q=>q.id),scores,packet})});
   const j=await res.json(); if(j.error) throw new Error(j.error); return j;
 }
 
@@ -774,7 +782,8 @@ function resultsView(){
       ${CONFIG.endpoint?`<div class="itm" style="padding:14px 0;border-top:1px solid var(--rule)"><span style="color:var(--muted)">${ICON.mail}</span>
         <span class="small">המגש הזה שמור למייל שלך — תוכל לחזור אליו מכל מכשיר, ולשנות תשובות בכל עת.</span></div>`:''}
       <div class="stack" style="gap:9px;padding-bottom:26px">
-        ${S.analysis?'<button class="btn primary" id="an">לקרוא את הניתוח שנכתב לך</button>':''}
+        ${S.analysis?'<button class="btn primary" id="an">לקרוא את הניתוח שנכתב לך</button>'
+          :(S.mailPending?`<div class="itm" style="padding:4px 0 6px"><span style="color:var(--muted)">${ICON.mail}</span><span class="small">הניתוח המילולי עוד בהכנה — הוא יגיע למייל שלך בדקות הקרובות.</span></div>`:'')}
         <div class="row" style="gap:9px">
           <button class="btn ghost grow" id="edit">לשנות תשובות</button>
           <button class="btn ghost grow" id="copy">להעתיק סיכום</button>

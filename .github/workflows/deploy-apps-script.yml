@@ -1,0 +1,67 @@
+# פורס את apps-script/Code.gs ל-Apps Script בכל מיזוג ל-main שנוגע בו.
+#
+# הגדרה חד-פעמית (פירוט ב-README, בסעיף "השרת"):
+#   secret   CLASPRC_JSON    — התוכן של ~/.clasprc.json אחרי `clasp login` (clasp 3.x)
+#   variable APPS_SCRIPT_ID  — Project Settings → Script ID בעורך של Apps Script
+#
+# הפריסה מעדכנת את ה-deployment הקיים (המזהה נלקח מהכתובת שב-config.js),
+# כך שכתובת השאלון לא משתנה.
+name: פריסת Apps Script
+
+on:
+  push:
+    branches: [main]
+    paths: ['apps-script/**', '.github/workflows/deploy-apps-script.yml']
+  workflow_dispatch:
+
+concurrency:
+  group: apps-script
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: התקנת clasp
+        run: npm install -g @google/clasp@3.4.1
+
+      - name: הרשאות
+        env:
+          CLASPRC_JSON: ${{ secrets.CLASPRC_JSON }}
+          SCRIPT_ID: ${{ vars.APPS_SCRIPT_ID }}
+        run: |
+          if [ -z "$CLASPRC_JSON" ] || [ -z "$SCRIPT_ID" ]; then
+            echo "::warning::הפריסה האוטומטית לא הוגדרה (חסרים CLASPRC_JSON או APPS_SCRIPT_ID) — מדלגים. ראו README"
+            echo "SKIP=1" >> "$GITHUB_ENV"; exit 0
+          fi
+          printf '%s' "$CLASPRC_JSON" > ~/.clasprc.json
+
+      # מושכים את הפרויקט כמו שהוא (כולל appsscript.json וקבצים אחרים, אם יש),
+      # ומחליפים רק את קובץ הקוד הראשי — כדי לא לדרוס הגדרות שנעשו בעורך.
+      - name: משיכה, החלפת הקוד ודחיפה
+        if: env.SKIP != '1'
+        env:
+          SCRIPT_ID: ${{ vars.APPS_SCRIPT_ID }}
+        run: |
+          mkdir build && cd build
+          printf '{"scriptId":"%s","rootDir":"."}' "$SCRIPT_ID" > .clasp.json
+          clasp pull
+          MAIN=$(grep -l 'function doPost' *.js | head -1)
+          test -n "$MAIN" || { echo "::error::לא נמצא בפרויקט קובץ עם doPost"; ls; exit 1; }
+          echo "מחליף את $MAIN"
+          cp ../apps-script/Code.gs "$MAIN"
+          clasp push --force
+
+      - name: פריסת גרסה חדשה לכתובת הקיימת
+        if: env.SKIP != '1'
+        run: |
+          cd build
+          DEPLOYMENT_ID=$(grep -o 'macros/s/[A-Za-z0-9_-]*' ../config.js | cut -d/ -f3)
+          test -n "$DEPLOYMENT_ID" || { echo "::error::לא נמצא מזהה deployment ב-config.js"; exit 1; }
+          clasp update-deployment "$DEPLOYMENT_ID" -d "${GITHUB_SHA::7}"

@@ -25,6 +25,30 @@
 תיוג שמאושר במסך התיוג נשמר בגיליון (`tags`) וגובר בזמן ריצה על מה שב-`app/parties.json`.
 `source: "estimate"` מסמן הערכה שטרם אושרה.
 
-## מה לא נמצא כאן
-השמירה, הניתוח המילולי ומייל האחזור רצים ב-Google Apps Script שצמוד לגיליון,
-ולא בריפו הזה. `config.js` הוא מה שמחבר ביניהם.
+## השרת (Apps Script)
+השמירה, הניתוח המילולי והמיילים רצים ב-Google Apps Script שצמוד לגיליון.
+`config.js` הוא מה שמחבר ביניהם. הקוד נמצא ב-`apps-script/Code.gs`.
+
+**פריסה אוטומטית:** כל מיזוג ל-main שמשנה את `apps-script/` מריץ את
+`.github/workflows/deploy-apps-script.yml`, שדוחף את הקוד ל-Apps Script ופורס גרסה
+חדשה באותה כתובת. אפשר גם להריץ ידנית: Actions → פריסת Apps Script → Run workflow.
+
+הגדרה חד-פעמית:
+1. https://script.google.com/home/usersettings → להפעיל את Google Apps Script API
+2. במחשב (או ב-Google Cloud Shell, shell.cloud.google.com, שעובד גם מהטלפון):
+   `npx @google/clasp@3.4.1 login --no-localhost`, לאשר בדפדפן, ואז `cat ~/.clasprc.json`
+3. בריפו: Settings → Secrets and variables → Actions
+   - Secrets → New repository secret: השם `CLASPRC_JSON`, הערך — כל התוכן של הקובץ מסעיף 2
+   - Variables → New repository variable: השם `APPS_SCRIPT_ID`, הערך `1bi0quvVKx-Kxzwm2kCm-1IoMz08lKUKJbpr7nSmmch-3Iml42Z71TDLo`
+
+בלי ההגדרה הזאת הפריסה האוטומטית מדלגת (אזהרה ב-Actions, לא כישלון).
+
+**כשהקוד צריך הרשאה חדשה מגוגל** (למשל טריגרים או שירות שלא היה בשימוש), הפריסה
+האוטומטית לא יכולה לאשר אותה: אחרי הפריסה צריך להריץ פונקציה אחת מהעורך (Run) ולאשר.
+עד אז ה-Web app עלול להחזיר שגיאת הרשאה — לכן שינוי כזה עדיף להדביק ולאשר ידנית לפני המיזוג.
+
+בפעם הראשונה בלבד: להריץ את `setupTrigger` מהעורך.
+
+`setupTrigger` יוצר טריגר שרץ כל 5 דקות: משלים ניתוחים שנכשלו (כולל משיבים ותיקים,
+בלי לשלוח להם מייל) ושולח את מייל הניתוח למי שסימן זאת בטופס.
+`previewMail` שולח לך מייל לדוגמה, ו-`pingModel` בודק שמפתח הניתוח עובד.
