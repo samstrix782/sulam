@@ -3,7 +3,7 @@
     "election": "הכנסת ה-26, 27.10.2026",
     "note": "הרשימות כפי שהוגשו ב-8–9.9.2026. האותיות טעונות אישור ועדת הבחירות. רשימות שאינן קרובות לאחוז החסימה הושמטו — אפשר להוסיף.",
     "tagger": "שמוליק קרסיק",
-    "tagging_note": "טיוטה ראשונה: הערכות של Claude לפי היכרות כללית עם המפלגות, לא מול הצבעה ספציפית. source=estimate עד שתוקן. רשימות חדשות (עמך ישראל, המילואימניקים, ישראל תחילה, נעם) — ביטחון נמוך. סבב 2026-10-05: נושאי ליבה לכל הרשימות מול מקורות שנפתחו ונבדקו; כל שינוי עם הערה וקישור, ועדיין source=estimate עד אישור בתיוג."
+    "tagging_note": "טיוטה ראשונה: הערכות של Claude לפי היכרות כללית עם המפלגות, לא מול הצבעה ספציפית. source=estimate עד שתוקן. רשימות חדשות (עמך ישראל, המילואימניקים, ישראל תחילה, נעם) — ביטחון נמוך. סבב 2026-10-05: נושאי ליבה לכל הרשימות מול מקורות שנפתחו ונבדקו; כל שינוי עם הערה וקישור, ועדיין source=estimate עד אישור בתיוג. סבב 2026-10-19: ראיונות, מצעים ופרסומים מ-1.10 עד 19.10; 12 שינויי רמה ו-104 מקורות חדשים שמאשרים רמה קיימת, כולם מול עמוד שנפתח ונבדק; עדיין source=estimate עד אישור בתיוג."
   },
   "parties": [
     {
@@ -131,8 +131,8 @@
         "v2_q3": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "N12 Data, מאקו 11.10.26: הליכוד תומכת בהחלת הרפורמה כפי שקידמה – כולל פסקת התגברות ברוב 61 וצמצום סמכות בג\"ץ לפסול חוקים",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-1b5d451818a21a1026.htm",
           "source": "estimate"
         },
         "v2_q4": {
@@ -229,8 +229,8 @@
         "v3_q2": {
           "level": 1,
           "principled": false,
-          "note": "[לפני 2026] נתניהו, AFP/Al-Monitor 3.12.25: מבקש חנינה וממשיך לרוץ תחת כתב אישום, בלי פרישה",
-          "link": "https://www.al-monitor.com/originals/2025/12/netanyahu-pardon-plea-seen-bid-ensure-survival-ahead-2026-vote",
+          "note": "נתניהו בערוץ 14 (כיכר השבת 13.10.26) על משפטו: \"המשפט הזה לא היה צריך להתחיל בכלל – ועכשיו הגיע הזמן להפסיק אותו\"",
+          "link": "https://www.kikar.co.il/political-news/netanyahu-iran-elections-interference-warning",
           "source": "estimate"
         },
         "v3_q3": {
@@ -306,8 +306,8 @@
         "v3_q13": {
           "level": 2,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "נתניהו בערוץ 14 (כיכר השבת 13.10.26): \"בג\"ץ רוצה להחזיר את תושבי ג'נין וטולכרם? ... זה פשוט לא יקרה\" (מתקרב לדרגה 1)",
+          "link": "https://www.kikar.co.il/political-news/netanyahu-iran-elections-interference-warning",
           "source": "estimate"
         },
         "v3_q14": {
@@ -327,22 +327,22 @@
         "v4_q1": {
           "level": 4,
           "principled": false,
-          "note": "נתניהו בעזה, AFP/Hespress 2.9.26: \"אנחנו לא נסוגים, נשארים על הקו\"; פירוז עזה ושליטה ביטחונית",
-          "link": "https://en.hespress.com/144773-netanyahu-says-we-are-not-retreating-during-gaza-visit.html",
+          "note": "השר קיש, JPost 19.10.26: 'שמירה על אזורי הביטחון' בין הקווים האדומים של הליכוד להרכבת קואליציה",
+          "link": "https://www.jpost.com/israel-election-2026/article-912101",
           "source": "estimate"
         },
         "v4_q2": {
           "level": 4,
           "principled": false,
-          "note": "אתר הליכוד (ספט' 26), \"הדרך שלנו\": חיזוק ההתיישבות והריבונות בכל חלקי הארץ",
-          "link": "https://www.likud.org.il/",
+          "note": "נתניהו בקו התפר, ערוץ 14 (כיכר השבת 13.10.26): \"מי שישלוט בשטח הזה וישאר בו זה צה\"ל. לא יהיה פה צבא ערבי ממערב לירדן\"",
+          "link": "https://www.kikar.co.il/political-news/netanyahu-iran-elections-interference-warning",
           "source": "estimate"
         },
         "v4_q3": {
           "level": 4,
           "principled": true,
-          "note": "אתר הליכוד, סיסמת הקמפיין (ספט' 26): \"אין ישר. זה או ימין, או פלסטין\"",
-          "link": "https://www.likud.org.il/",
+          "note": "השר קיש, JPost 19.10.26: התנגדות למדינה פלסטינית בין 'הקווים האדומים' של הליכוד לקואליציה; נתניהו בערוץ 14 13.10: \"לא יהיה צבא ערבי ממערב לירדן\"",
+          "link": "https://www.jpost.com/israel-election-2026/article-912101",
           "source": "estimate"
         },
         "v4_q4": {
@@ -362,8 +362,8 @@
         "v4_q6": {
           "level": 4,
           "principled": false,
-          "note": "נתניהו בכנס הפתיחה, מעריב 17.9.26: איראן כ\"גוש סרטני\"; \"גם מול האמריקנים צריך לדעת להגיד לא\"",
-          "link": "https://www.maariv.co.il/news/politics/article-1368601",
+          "note": "נתניהו בתדריך, ynet 18.10.26: \"התוכנית שלנו היא תוכנית מאוד מקיפה ומאוד נחושה להביא לנפילת המשטר\" באיראן (אין התייחסות לפעולה בלי ארה\"ב)",
+          "link": "https://ynet.co.il/news/elections2026/article/syrt3qz3gg",
           "source": "estimate"
         },
         "v4_q7": {
@@ -404,8 +404,8 @@
         "v4_q12": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "נתניהו בכנס תורת הביטחון, ynet 18.10.26: יוסיף כ-450 מיליארד ש\"ח לתקציב הביטחון בעשור; \"צה\"ל בהחלט חייב לגדול\"",
+          "link": "https://ynet.co.il/news/elections2026/article/syrt3qz3gg",
           "source": "estimate"
         },
         "v4_q13": {
@@ -598,10 +598,10 @@
           "source": "estimate"
         },
         "v6_q10": {
-          "level": 4,
+          "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "השר קיש (ליכוד), JPost 19.10.26: נגד שלילת כל התקצוב ממוסד בלי ליבה מלאה; תקצוב לפי היקף הליבה כתמריץ להרחבתה",
+          "link": "https://www.jpost.com/israel-election-2026/article-912101",
           "source": "estimate"
         },
         "v6_q11": {
@@ -649,8 +649,8 @@
         "v7_q3": {
           "level": 3,
           "principled": false,
-          "note": "הליכוד, ynet 16.9.26: יעבירו את חוק הגיוס שלא עבר, מיד אחרי הבחירות ובהתאם לדרישת ש\"ס",
-          "link": "https://www.ynet.co.il/news/elections2026/article/yokra14898966",
+          "note": "נתניהו בכאן מורשת, כיכר השבת 18.10.26: \"אעביר חוק לגיוס 23,000 חרדים בשלוש וחצי שנים\"; \"מי שלא לומד, חייב להתגייס\"",
+          "link": "https://www.kikar.co.il/political-news/netanyahu-haredi-draft-law-interview-elections",
           "source": "estimate"
         },
         "v7_q4": {
@@ -677,8 +677,8 @@
         "v7_q7": {
           "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "נתניהו, כיכר השבת 18.10.26: מי שאומר 'נמות ולא נתגייס' – \"שילך לכלא\"; קיש (JPost 19.10): גזר ומקל, לא מאסר. מסר מעורב – אפשר לשקול 4",
+          "link": "https://www.kikar.co.il/political-news/netanyahu-haredi-draft-law-interview-elections",
           "source": "estimate"
         },
         "v7_q8": {
@@ -724,10 +724,10 @@
           "source": "estimate"
         },
         "v7_q14": {
-          "level": 2,
+          "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "השר קיש (ליכוד), JPost 19.10.26: תקצוב מוסדות חרדיים לפי היקף לימודי הליבה (50%/75%), לא חובה מלאה ולא שלילת תקציב",
+          "link": "https://www.jpost.com/israel-election-2026/article-912101",
           "source": "estimate"
         },
         "v7_q15": {
@@ -785,15 +785,15 @@
         "v1_q5": {
           "level": 5,
           "principled": true,
-          "note": "התנגדות לנישואין אזרחיים",
-          "link": "",
+          "note": "הרב יצחק יוסף, כיכר השבת 17.10.26: \"אם השמאל יעלה, אוי ואבוי... נישואים אזרחיים, תחבורה ציבורית בשבת\" – \"פיקוח נפש רוחני\"",
+          "link": "https://kikar.co.il/israel-news/tn2iio",
           "source": "estimate"
         },
         "v1_q6": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "הרב יצחק יוסף, כיכר השבת 17.10.26: תחבורה ציבורית בשבת ונישואים אזרחיים כ\"פיקוח נפש רוחני\" (מאשר לפחות דרגה 4)",
+          "link": "https://kikar.co.il/israel-news/tn2iio",
           "source": "estimate"
         },
         "v1_q7": {
@@ -841,8 +841,8 @@
         "v1_q13": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "הרב יצחק יוסף (מנהיג ש\"ס), מכתב – ערוץ 7 18.10.26: עלייה להר הבית אסורה \"מחשש לכרת\"; אסור להצביע לעוצמה יהודית בשל עליית בן גביר",
+          "link": "https://www.inn.co.il/news/708769",
           "source": "estimate"
         },
         "v1_q14": {
@@ -869,8 +869,8 @@
         "v2_q3": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "N12 Data, מאקו 11.10.26: ש\"ס תומכת בפסקת ההתגברות כחלק מצמצום ההתערבות השיפוטית; מתנגדת להרחבת סמכות בג\"ץ לפסול חוקים",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-1b5d451818a21a1026.htm",
           "source": "estimate"
         },
         "v2_q4": {
@@ -888,10 +888,10 @@
           "source": "estimate"
         },
         "v2_q6": {
-          "level": 4,
+          "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "N12 Data, מאקו 11.10.26: חברי ש\"ס תמכו בחקיקה המאפשרת לממשלה לא לראות בחוו\"ד היועמ\"ש מחייבת; דרעי 14.10: \"היועמ\"שית המודחת, אנרכיסטית\"",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-1b5d451818a21a1026.htm",
           "source": "estimate"
         },
         "v2_q7": {
@@ -1387,8 +1387,8 @@
         "v7_q3": {
           "level": 1,
           "principled": true,
-          "note": "דרעי, הארץ 3.9.26: לא צריך לקרוא לבני ישיבות להתגייס, 'הצבא לא רוצה חיילים חרדים'",
-          "link": "https://www.haaretz.co.il/news/elections/2026-09-03/ty-article/000001a0-6613-def7-a7f7-6ef765d90000",
+          "note": "דרעי ברדיו כיכר השבת (מאקו 14.10.26): \"לא תהיה ממשלה... שש\"ס תומכת או משתתפת בלי שנסדיר את מעמד תלמידי הישיבות\"; \"כל מי שלומד תורה ימשיך\"",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-420d8b8ce3931a1027.htm",
           "source": "estimate"
         },
         "v7_q4": {
@@ -1415,8 +1415,8 @@
         "v7_q7": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "דרעי (מאקו 14.10.26) נגד מעצרי עריקים חרדים: \"איך אפשר להשלים עם זה שהחרב הזו מונחת על המעצרים?\"; \"אף מעצר לא מביא חייל\"",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-420d8b8ce3931a1027.htm",
           "source": "estimate"
         },
         "v7_q8": {
@@ -1630,10 +1630,10 @@
           "source": "estimate"
         },
         "v2_q6": {
-          "level": 4,
+          "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "N12 Data, מאקו 11.10.26: יהדות התורה בעד חוק שמאפשר לממשלה לקבוע שחוו\"ד היועמ\"ש אינה מחייבת; אשר 13.10: \"התגייסות של הייעוץ המשפטי\"",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-1b5d451818a21a1026.htm",
           "source": "estimate"
         },
         "v2_q7": {
@@ -2129,8 +2129,8 @@
         "v7_q3": {
           "level": 1,
           "principled": true,
-          "note": "אשר וגולדקנופף, JDN 28.9.26: לא נתמוך בשום ממשלה ללא הסדרת מעמד לומדי התורה; חוק גיוס 'ללא סנקציות וללא יעדים'",
-          "link": "https://www.jdn.co.il/news/2735594/",
+          "note": "יו\"ר יהדות התורה אשר, כיכר השבת 11.10.26: \"מי שיושב ולומד לא אמור לקבל סנקציות\"; לא ניכנס ולא נתמוך בממשלה שלא תעביר קודם את חוק הגיוס",
+          "link": "https://www.kikar.co.il/haredim-news/tmr8u6",
           "source": "estimate"
         },
         "v7_q4": {
@@ -2157,8 +2157,8 @@
         "v7_q7": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "אשר בכנס במת ישראל, וואלה 15.10.26: \"לא ישנו אותנו לא בסנקציות ולא בשום דבר\"; החוק – \"הסדרת מעמדם של בני התורה\"",
+          "link": "https://www.walla.co.il/news/politics/383957560",
           "source": "estimate"
         },
         "v7_q8": {
@@ -2213,8 +2213,8 @@
         "v7_q15": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "אשר בכנס התעשיינים, כיכר השבת 14.10.26, נגד סנקציות על משפחות אברכים: \"אם החלטתם שאנחנו לא אזרחים שווי זכויות... תגידו את זה ביושר\"",
+          "link": "https://www.kikar.co.il/haredim-news/asher-denies-eisenkot-meeting-claims",
           "source": "estimate"
         },
         "v7_q16": {
@@ -2318,8 +2318,8 @@
         "v1_q12": {
           "level": 5,
           "principled": true,
-          "note": "ריבונות ביו\"ש — ליבת המצע",
-          "link": "",
+          "note": "סמוטריץ', ערוץ 7 1.10.26: \"השלב הבא – לפרק את הרשות, לבטל את אוסלו, לטשטש את הגבולות, להחיל ריבונות\"",
+          "link": "https://www.inn.co.il/news/707518",
           "source": "estimate"
         },
         "v1_q13": {
@@ -2498,10 +2498,10 @@
           "source": "estimate"
         },
         "v3_q9": {
-          "level": 1,
+          "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "סמוטריץ', ערוץ 7 1.10.26: אלימות מתנחלים \"רעה, בכל מקום\" ו\"צריך למגר אותה\"; האחריות על רשויות האכיפה",
+          "link": "https://www.inn.co.il/news/707518",
           "source": "estimate"
         },
         "v3_q10": {
@@ -2528,8 +2528,8 @@
         "v3_q13": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "סמוטריץ', ynet 12.10.26: \"ביטחון ישראל אינו שפיט\"; קרא לא להגיב לעתירות ולא לשלוח פרקליטים",
+          "link": "https://www.ynet.co.il/news/elections2026/article/h143lkcszg",
           "source": "estimate"
         },
         "v3_q14": {
@@ -2605,8 +2605,8 @@
         "v4_q9": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "סמוטריץ', ynet 12.10.26: בג\"ץ \"קשרו את הידיים לחיילים שלנו\" ערב 7.10; \"ביטחון ישראל אינו שפיט\"",
+          "link": "https://www.ynet.co.il/news/elections2026/article/h143lkcszg",
           "source": "estimate"
         },
         "v4_q10": {
@@ -2871,8 +2871,8 @@
         "v7_q3": {
           "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "סמוטריץ' בריאיון חג, ערוץ 7 1.10.26: \"זה לא ילך בכוח, זה ילך בהסכמות\"; חזר על כך בעפרה (ערוץ 7 12.10.26)",
+          "link": "https://www.inn.co.il/news/707518",
           "source": "estimate"
         },
         "v7_q4": {
@@ -3066,8 +3066,8 @@
         "v1_q13": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "בן גביר, ערוץ 7 11.10.26: \"אני גאה יותר מכול בשינוי בהר הבית\" (התרת תפילת יהודים)",
+          "link": "https://www.inn.co.il/news/708248",
           "source": "estimate"
         },
         "v1_q14": {
@@ -3108,15 +3108,15 @@
         "v2_q5": {
           "level": 5,
           "principled": false,
-          "note": "פרופיל המפלגה, המכון הישראלי לדמוקרטיה (2026): בחירת שופטי העליון בידי פוליטיקאים",
-          "link": "https://www.idi.org.il/policy/parties-and-elections/parties/otzma-yehudit/",
+          "note": "תוכנית גוטליב, כיפה 8.10.26: מועמדים לעליון יעברו שימוע בוועדת החוקה ואישור ברוב של שני שלישים",
+          "link": "https://www.kipa.co.il/%D7%97%D7%93%D7%A9%D7%95%D7%AA/1233192-0/",
           "source": "estimate"
         },
         "v2_q6": {
           "level": 5,
           "principled": false,
-          "note": "עוצמה, JPost 22.9.26: גוטליב כשרת משפטים תפטר מיד את היועמ\"שית כצעד ראשון בהקמת הממשלה",
-          "link": "https://www.jpost.com/israel-news/politics-and-diplomacy/article-909337",
+          "note": "גוטליב (מס' 2), כיפה 8.10.26: תיק המשפטים \"חייב להיות בידיים של עוצמה יהודית\"; צעד ראשון – פיטורים מיידיים של היועמ\"שית",
+          "link": "https://www.kipa.co.il/%D7%97%D7%93%D7%A9%D7%95%D7%AA/1233192-0/",
           "source": "estimate"
         },
         "v2_q7": {
@@ -3290,8 +3290,8 @@
         "v4_q1": {
           "level": 5,
           "principled": true,
-          "note": "בן גביר, מעריב 3.9.26: תוכנית \"התנתקות 710\" להגירת 1.86 מיליון עזתים; משרד הגירה – בראש הדרישות הקואליציוניות",
-          "link": "https://www.maariv.co.il/news/elections-2026/article-1362797",
+          "note": "בן גביר בכנס הבחירות של \"הדור\", ערוץ 7 11.10.26: \"לכבוש ולהתיישב בכל רצועת עזה ולעודד הגירה\"; \"עם 15 מנדטים – תהיה הגירה מעזה\"",
+          "link": "https://www.inn.co.il/news/708248",
           "source": "estimate"
         },
         "v4_q2": {
@@ -3304,8 +3304,8 @@
         "v4_q3": {
           "level": 5,
           "principled": false,
-          "note": "עוצמה, שאלון ynet 30.9.26: ריבונות מלאה ביו\"ש ופירוק הרש\"פ מנשקה ומנכסיה",
-          "link": "https://www.ynetnews.com/article/h1dpvu9cgl",
+          "note": "בן גביר בגדר ניצני עוז, ערוץ 7 7.10.26: \"צריך לפרק את הרשות. לקחת להם את הנשקים. לפרז אותם\"",
+          "link": "https://www.inn.co.il/news/707915",
           "source": "estimate"
         },
         "v4_q4": {
@@ -3318,8 +3318,8 @@
         "v4_q5": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "בן גביר, וואלה 15.10.26: התעקש בקבינט על חיסול נסראללה; דרש בעזה \"בואו נפציץ, בואו נעשה סיכולים\"",
+          "link": "https://www.walla.co.il/news/politics/383957574",
           "source": "estimate"
         },
         "v4_q6": {
@@ -3612,8 +3612,8 @@
         "v7_q3": {
           "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "בן גביר במכתב לראשי המפלגות החרדיות, חדשות המשפחה 8.10.26: מי שאינו לומד – יתגייס למסלולים חרדיים; לומדי התורה האמיתיים ימשיכו ללמוד",
+          "link": "https://hm-news.co.il/660898/",
           "source": "estimate"
         },
         "v7_q4": {
@@ -3783,8 +3783,8 @@
         "v1_q10": {
           "level": 5,
           "principled": true,
-          "note": "חינוך יהודי",
-          "link": "",
+          "note": "מעוז בכנס 3,500 פעילים, ערוץ 7 14.10.26: הקולות ילכו \"לחיזוק החינוך היהודי ולהכנסת הקוד של מדינה יהודית לכל המערכות הציבוריות\"",
+          "link": "https://www.inn.co.il/news/708509",
           "source": "estimate"
         },
         "v1_q11": {
@@ -4780,8 +4780,8 @@
         "v4_q3": {
           "level": 5,
           "principled": false,
-          "note": "וינטר בהשקת המפלגה, הארץ 25.8.26: 'לעולם לא תהיה פה מדינה פלסטינית'",
-          "link": "https://www.haaretz.co.il/news/elections/2026-08-25/ty-article/.premium/000001a0-39b2-d274-a7f4-bdb39a580000",
+          "note": "וינטר בתגובה לסערת הסרטון של חדאד, מעריב 4.10.26: 'לא תהיה פה מדינה פלסטינית לעולם'",
+          "link": "https://www.maariv.co.il/news/elections-2026/article-1373313",
           "source": "estimate"
         },
         "v4_q4": {
@@ -4794,8 +4794,8 @@
         "v4_q5": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "וינטר, N12 3.10.26: שינוי תפיסת הביטחון – גם לבנון 'תשלם מחיר טריטוריאלי'; 'תגובה שכל העולם ידע'",
+          "link": "https://www.mako.co.il/news-military/2026_q4/Article-e3a58ce83f201a1027.htm",
           "source": "estimate"
         },
         "v4_q6": {
@@ -4808,8 +4808,8 @@
         "v4_q7": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "וינטר לדנה ויס, N12 3.10.26: כשר ביטחון ישים את תוכנית טראמפ בצד – 'אני מוביל'",
+          "link": "https://www.mako.co.il/news-military/2026_q4/Article-e3a58ce83f201a1027.htm",
           "source": "estimate"
         },
         "v4_q8": {
@@ -4864,8 +4864,8 @@
         "v4_q15": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "תוכנית 18 הנקודות של עמך ישראל, JNS 18.10.26: הרחבת ייצור תחמושת מקומי וחופש פעולה מול חיזבאללה",
+          "link": "https://www.jns.org/feature/israels-parties-explained-amcha-yisrael",
           "source": "estimate"
         },
         "v5_q1": {
@@ -4990,8 +4990,8 @@
         "v6_q3": {
           "level": 2,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "וינטר ב'פגוש את העיתונות', N12 10.10.26: ממשלה 'עם יאיר גולן ועם ערבים היא סכנה למדינת ישראל'",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-096b8e33dc321a1026.htm",
           "source": "estimate"
         },
         "v6_q4": {
@@ -5088,8 +5088,8 @@
         "v7_q3": {
           "level": 4,
           "principled": true,
-          "note": "וינטר, מעריב 2.9.26: לא ניכנס לממשלה בלי חוק שמחייב את כולם להתייצב; המצע: מכסות למצוינות תורנית",
-          "link": "https://www.maariv.co.il/news/politics/article-1362429",
+          "note": "תוכנית המשרתים של עמך ישראל, כיפה 11.10.26: תקרת 25% ללומדי תורה ממחזור הגיוס החרדי; חוק מחייב לפני השבעת הממשלה",
+          "link": "https://www.kipa.co.il/%d7%97%d7%93%d7%a9%d7%95%d7%aa/1233396-0/",
           "source": "estimate"
         },
         "v7_q4": {
@@ -5116,15 +5116,15 @@
         "v7_q7": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "וינטר בבני ברק, JPost 9.10.26: 'חוק המשרתים' – מי שמשרת יקבל יותר; מי שלא יסדיר את מעמדו לא יקבל כלום",
+          "link": "https://www.jpost.com/israel-news/article-911120",
           "source": "estimate"
         },
         "v7_q8": {
           "level": 5,
           "principled": false,
-          "note": "מצע עמך ישראל: מערך תגמולים דיפרנציאלי לפי סוג השירות והסיכון; 'מי שייתן יותר – יקבל הרבה יותר'",
-          "link": "https://amchaisrael.co.il/foundations",
+          "note": "תוכנית המשרתים, כיפה 11.10.26: 'ייתנו – יקבלו'; העלאת שכר הסדיר והכפלת שכר הלוחמים לקראת סוף השירות",
+          "link": "https://www.kipa.co.il/%d7%97%d7%93%d7%a9%d7%95%d7%aa/1233396-0/",
           "source": "estimate"
         },
         "v7_q9": {
@@ -5276,8 +5276,8 @@
         "v1_q12": {
           "level": 3,
           "principled": false,
-          "note": "איזנקוט, INN 27.8.26: נגד קידום E1 'לא עכשיו, טעות שעולה לנו מחיר בינלאומי'; ynet 30.9: חיזוק הגושים כחוק",
-          "link": "https://www.israelnationalnews.com/news/432305",
+          "note": "איזנקוט, ערוץ 7 11.10.26: 'בעד ההתיישבות היהודית בשני תנאים' – לפי מפת האינטרסים הלאומית; מתנגד לספח 2.8 מיליון פלסטינים",
+          "link": "https://www.inn.co.il/news/708230",
           "source": "estimate"
         },
         "v1_q13": {
@@ -5318,22 +5318,22 @@
         "v2_q4": {
           "level": 2,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "איזנקוט, ערוץ 7 11.10.26: אחרי ביטול שינויי הוועדה לבחירת שופטים – 'המרכיב הבא זה להעביר חוקה לישראל'",
+          "link": "https://www.inn.co.il/news/708230",
           "source": "estimate"
         },
         "v2_q5": {
           "level": 3,
           "principled": false,
-          "note": "ישר!, ynet 22.9.26: ביטול חוק הרכב הוועדה; מנגנון בחוק יסוד המאזן בין שיקולים מקצועיים וציבוריים",
-          "link": "https://www.ynetnews.com/article/hkcjtk1cme",
+          "note": "איזנקוט, טיימס אוף ישראל 6.10.26: יבטל מיד את החוק ששינה את הוועדה לבחירת שופטים – 'חוק מושחת' לבחירת שופטים לפי מפתח מפלגתי",
+          "link": "https://www.timesofisrael.com/bereaved-by-war-determined-to-heal-protect-and-revive-israel-gadi-eisenkots-prime-ministerial-mission/",
           "source": "estimate"
         },
         "v2_q6": {
           "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "איזנקוט, טיימס אוף ישראל 6.10.26: יבטל מיד את הצעדים שנועדו להחליש את היועמ\"ש",
+          "link": "https://www.timesofisrael.com/bereaved-by-war-determined-to-heal-protect-and-revive-israel-gadi-eisenkots-prime-ministerial-mission/",
           "source": "estimate"
         },
         "v2_q7": {
@@ -5365,10 +5365,10 @@
           "source": "estimate"
         },
         "v2_q11": {
-          "level": 3,
+          "level": 2,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "איזנקוט, טיימס אוף ישראל 6.10.26: 'נגביל את כהונת ראש הממשלה לשמונה שנים' (בלי אזכור חזרה אחרי הפסקה)",
+          "link": "https://www.timesofisrael.com/bereaved-by-war-determined-to-heal-protect-and-revive-israel-gadi-eisenkots-prime-ministerial-mission/",
           "source": "estimate"
         },
         "v2_q12": {
@@ -5409,8 +5409,8 @@
         "v3_q2": {
           "level": 4,
           "principled": true,
-          "note": "שלטון החוק",
-          "link": "",
+          "note": "איזנקוט, טיימס אוף ישראל 6.10.26: בין הצעדים המיידיים – חוק שימנע מנאשם בפלילים להרכיב ממשלה",
+          "link": "https://www.timesofisrael.com/bereaved-by-war-determined-to-heal-protect-and-revive-israel-gadi-eisenkots-prime-ministerial-mission/",
           "source": "estimate"
         },
         "v3_q3": {
@@ -5458,8 +5458,8 @@
         "v3_q9": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "איזנקוט, טיימס אוף ישראל 6.10.26: כל המאחזים הבלתי חוקיים בשטחי A ו-B יפונו מיד; ערוץ 7 11.10: חוות בלתי חוקיות 'יטופלו'",
+          "link": "https://www.timesofisrael.com/bereaved-by-war-determined-to-heal-protect-and-revive-israel-gadi-eisenkots-prime-ministerial-mission/",
           "source": "estimate"
         },
         "v3_q10": {
@@ -5507,8 +5507,8 @@
         "v4_q1": {
           "level": 3,
           "principled": false,
-          "note": "מתווה איזנקוט, JPost 29.3.24 (לפני 2026): חופש פעולה וחיץ לצה\"ל, ממשל אזרחי טכנוקרטי בפיקוח ארה\"ב ומדינות ערב",
-          "link": "https://m.jpost.com/israel-hamas-war/article-794305",
+          "note": "איזנקוט, טיימס אוף ישראל 6.10.26: יקדם את מתווה 20 הנקודות של טראמפ – פירוז חמאס תחילה ואז כוח ייצוב רב-לאומי; מעריב 15.10: תוך 18 חודשים חמאס לא ישלוט",
+          "link": "https://www.timesofisrael.com/bereaved-by-war-determined-to-heal-protect-and-revive-israel-gadi-eisenkots-prime-ministerial-mission/",
           "source": "estimate"
         },
         "v4_q2": {
@@ -5519,10 +5519,10 @@
           "source": "estimate"
         },
         "v4_q3": {
-          "level": 4,
+          "level": 3,
           "principled": false,
-          "note": "איזנקוט, הארץ 22.8.26: 'אין מדינה פלסטינית, ובממשלה שנקים לא תקום מדינה פלסטינית'",
-          "link": "https://www.haaretz.co.il/news/elections/2026-08-22/ty-article/000001a0-2a9c-d293-a1e7-3a9c98d30000",
+          "note": "איזנקוט, טיימס אוף ישראל 6.10.26: הסדר קבע עתידי – 'אוטונומיה או מדינה-מינוס', בלי צבא ובשליטה ביטחונית ישראלית גוברת; ערוץ 7 11.10: שתי מדינות 'טעות'",
+          "link": "https://www.timesofisrael.com/bereaved-by-war-determined-to-heal-protect-and-revive-israel-gadi-eisenkots-prime-ministerial-mission/",
           "source": "estimate"
         },
         "v4_q4": {
@@ -5542,8 +5542,8 @@
         "v4_q6": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "איזנקוט, טיימס אוף ישראל 6.10.26: תוכנית מקיפה עם האמריקאים 'לפעול להשמדת היכולת' הגרעינית של איראן ולהקים משטר פיקוח פולשני",
+          "link": "https://www.timesofisrael.com/bereaved-by-war-determined-to-heal-protect-and-revive-israel-gadi-eisenkots-prime-ministerial-mission/",
           "source": "estimate"
         },
         "v4_q7": {
@@ -5731,8 +5731,8 @@
         "v6_q3": {
           "level": 2,
           "principled": false,
-          "note": "איזנקוט, מעריב 26.9.26: שותף רק מי שמקבל מדינה יהודית ודמוקרטית וחובת שירות; 'לא רואה מפלגה ערבית' כזו",
-          "link": "https://www.maariv.co.il/news/politics/article-1370825",
+          "note": "איזנקוט, ynet 9.10.26: שותף רק מי שמקבל 4 עקרונות (יהודית-דמוקרטית, מגילת העצמאות, חובת שירות, השמדת חמאס); 'לא מכיר אף מפלגה ערבית שמקבלת את זה'",
+          "link": "https://www.ynet.co.il/news/elections2026/article/yokra14920134",
           "source": "estimate"
         },
         "v6_q4": {
@@ -5778,10 +5778,10 @@
           "source": "estimate"
         },
         "v6_q10": {
-          "level": 3,
+          "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "איזנקוט, טיימס אוף ישראל 6.10.26: מוסד שלא ייכנס למערכת החינוך הממלכתית בתוך ארבע שנים 'פשוט לא יקבל מימון מהמדינה'",
+          "link": "https://www.timesofisrael.com/bereaved-by-war-determined-to-heal-protect-and-revive-israel-gadi-eisenkots-prime-ministerial-mission/",
           "source": "estimate"
         },
         "v6_q11": {
@@ -5829,15 +5829,15 @@
         "v7_q3": {
           "level": 5,
           "principled": true,
-          "note": "ישר!, ynet 16.9.26: דיחוי רק לעד 3% מצטיינים (כולל לומדי תורה) עם טירונות; למשתמט — שלילת הטבות והליך פלילי",
-          "link": "https://www.ynetnews.com/article/sjph72wyzx",
+          "note": "איזנקוט, ערוץ 7 11.10.26: פטור ל-3% בשנה 'בצורה מדורגת, לא באחת'; מוכן ללכת לבחירות נוספות ולא לוותר על חובת השירות",
+          "link": "https://www.inn.co.il/news/708230",
           "source": "estimate"
         },
         "v7_q4": {
           "level": 5,
           "principled": true,
-          "note": "ישר!, מצע 'שירות לכל' (6.26): מי שלא משרת בצה\"ל יחויב בשירות אזרחי; המנהלת תזמן את כלל הצעירים",
-          "link": "https://yasharwitheisenkot.com/principles/service-for-all/",
+          "note": "איזנקוט, טיימס אוף ישראל 6.10.26: חוק שירות כללי לכל אזרחי ישראל – צבאי, לאומי או אזרחי, כולל שירות לאומי לערבים",
+          "link": "https://www.timesofisrael.com/bereaved-by-war-determined-to-heal-protect-and-revive-israel-gadi-eisenkots-prime-ministerial-mission/",
           "source": "estimate"
         },
         "v7_q5": {
@@ -5982,8 +5982,8 @@
         "v1_q7": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "בנט, ג'רוזלם פוסט 10.10.26: יותר תחרות בהשגחת הכשרות",
+          "link": "https://www.jpost.com/israel-election-2026/article-910703",
           "source": "estimate"
         },
         "v1_q8": {
@@ -6058,23 +6058,23 @@
         },
         "v2_q4": {
           "level": 2,
-          "principled": false,
-          "note": "",
-          "link": "",
+          "principled": true,
+          "note": "בנט בכנס 'הדור', הארץ 11.10.26: 'חוקה לישראל' בין העקרונות המרכזיים שכל שותף נדרש לקבל, לצד ועדת חקירה וגיוס לכל",
+          "link": "https://www.haaretz.co.il/news/elections/2026-10-11/ty-article/000001a1-2c50-d1b4-a5fb-acdc91f10000",
           "source": "estimate"
         },
         "v2_q5": {
           "level": 3,
           "principled": false,
-          "note": "ביחד, ynet 22.9.26: תבטל את החוק החדש לבחירת שופטים, שלדבריה מפוליטיזציה את בתי המשפט",
-          "link": "https://www.ynetnews.com/article/hkcjtk1cme",
+          "note": "צוותי גוש השינוי (כולל נציגי ביחד), ynet 16.10.26: ביטול חוק הוועדה לבחירת שופטים בין צעדי החקיקה הראשונים",
+          "link": "https://www.ynet.co.il/news/elections2026/article/yokra14928535",
           "source": "estimate"
         },
         "v2_q6": {
           "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "צוותי גוש השינוי (כולל נציגי ביחד), ynet 16.10.26: ביטול החוקים הנוגעים לסמכויות היועמ\"שית",
+          "link": "https://www.ynet.co.il/news/elections2026/article/yokra14928535",
           "source": "estimate"
         },
         "v2_q7": {
@@ -6108,8 +6108,8 @@
         "v2_q11": {
           "level": 3,
           "principled": true,
-          "note": "בנט, JDN 25.9.25: תזכיר חוק יסוד — 8 שנים או שתי קדנציות, חזרה רק אחרי 8 שנות צינון; תנאי קואליציוני",
-          "link": "https://www.jdn.co.il/news/2486892/",
+          "note": "בנט, טיימס אוף ישראל 18.10.26: בכנסת הראשונה – הצעת חוק ממשלתית להגבלת כהונת ראש הממשלה ל-8 שנים, לצד ועדת חקירה ממלכתית",
+          "link": "https://www.timesofisrael.com/bennett-liberman-lay-out-plans-to-pass-laws-against-netanyahu-immediately-after-election/",
           "source": "estimate"
         },
         "v2_q12": {
@@ -6248,8 +6248,8 @@
         "v4_q1": {
           "level": 3,
           "principled": false,
-          "note": "בנט, ynetnews 19.8.26: נוציא את טורקיה וקטאר מעזה ונכניס את מצרים, תוך שמירה על חופש הפעולה של צה\"ל",
-          "link": "https://www.ynetnews.com/article/hkqoql7vmx",
+          "note": "בנט, ג'רוזלם פוסט 10.10.26: אזורי ביטחון בעזה, פירוז חמאס ו'תפקיד מרכזי למצרים'; ynet 12.10: להגדיר את קטאר כאויב ואז הכרעת חמאס",
+          "link": "https://www.jpost.com/israel-election-2026/article-910703",
           "source": "estimate"
         },
         "v4_q2": {
@@ -6381,8 +6381,8 @@
         "v5_q5": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "בנט, ג'רוזלם פוסט 10.10.26: פירוק מונופולים, מניעת יבואנים בלעדיים ממותגים נוספים, יעד מחירי מזון כממוצע OECD",
+          "link": "https://www.jpost.com/israel-election-2026/article-910703",
           "source": "estimate"
         },
         "v5_q6": {
@@ -6472,8 +6472,8 @@
         "v6_q3": {
           "level": 2,
           "principled": false,
-          "note": "בנט לצד לפיד, הארץ 26.4.26: נסתמך רק על מפלגות ציוניות; 'המפלגות הערביות לא ציוניות ולכן לא נסתמך עליהן'",
-          "link": "https://www.haaretz.co.il/news/elections/2026-04-26/ty-article/0000019d-cac7-d95a-afbd-ebcfca080000",
+          "note": "בנט, ynet 12.10.26: הטענה שהגוש יישען על מפלגות ערביות – 'חרטא'; 'אנחנו הולכים להקים ממשלה ציונית'",
+          "link": "https://www.ynet.co.il/news/elections2026/article/s1rvfkcsfx",
           "source": "estimate"
         },
         "v6_q4": {
@@ -6498,10 +6498,10 @@
           "source": "estimate"
         },
         "v6_q7": {
-          "level": 4,
+          "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "ביחד, ג'רוזלם פוסט 10.10.26: נישואים אזרחיים; לפיד – חקיקה לשוויון זכויות 'לכל זוג' (כולל להט\"ב) ב-100 הימים הראשונים",
+          "link": "https://www.jpost.com/israel-election-2026/article-910703",
           "source": "estimate"
         },
         "v6_q8": {
@@ -6570,8 +6570,8 @@
         "v7_q3": {
           "level": 4,
           "principled": true,
-          "note": "ביחד, ynet 16.9.26: כולם מתגייסים 'בלי פטורים, בלי מכסות ובלי יעדים'; מי שלא מתגייס 'לא יקבל שקל'; בלי אכיפה משטרתית",
-          "link": "https://www.ynetnews.com/article/sjph72wyzx",
+          "note": "בנט, וואלה 8.10.26: הפתרון אינו מעצרים אלא עצירת תקציבים – 'סוגרים את כל הברזים, זה בערך 50 ברזים' ומציעים חלופה לשירות, עבודה ולימוד",
+          "link": "https://www.walla.co.il/news/politics/383956761",
           "source": "estimate"
         },
         "v7_q4": {
@@ -6598,15 +6598,15 @@
         "v7_q7": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "בנט, וואלה 8.10.26: לא מעצרים – סגירת כ-50 'ברזים' תקציביים למשתמטים",
+          "link": "https://www.walla.co.il/news/politics/383956761",
           "source": "estimate"
         },
         "v7_q8": {
-          "level": 4,
+          "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "בנט, ynet 12.10.26: 'מהפכת המשרתים' – מעונות יום חינם למילואימניקים, תשלומים בחצי מחיר ומיליון ש\"ח סבסוד לדירה",
+          "link": "https://www.ynet.co.il/news/elections2026/article/s1rvfkcsfx",
           "source": "estimate"
         },
         "v7_q9": {
@@ -6713,8 +6713,8 @@
         "v1_q6": {
           "level": 3,
           "principled": false,
-          "note": "מצע ישראל ביתנו (עודכן 4.10.26): פתיחת עסקים ותחבורה ציבורית בשבת – בסמכות הרשויות המקומיות",
-          "link": "https://beytenu.org.il/party-platform/",
+          "note": "ליברמן, mako 17.10.26: בממשלה הבאה תופעל תחבורה ציבורית בשבת \"בהתאם לצביון של כל עיר\"; \"חיה ותן לחיות\"",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-2ec9703f28a41a1026.htm",
           "source": "estimate"
         },
         "v1_q7": {
@@ -6797,8 +6797,8 @@
         "v2_q4": {
           "level": 2,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "ליברמן, וואלה 11.10.26: צוות מומחים יגבש נוסח חוקה בתוך חצי שנה – דת ומדינה, יחסי הרשויות וערכי הציונות; אישור במשאל עם",
+          "link": "https://www.walla.co.il/news/politics/383957059",
           "source": "estimate"
         },
         "v2_q5": {
@@ -6853,8 +6853,8 @@
         "v2_q12": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "ליברמן, וואלה 11.10.26: החוקה תאושר ב\"משאל עם מחוץ לכנסת\" ולא בכנסת",
+          "link": "https://www.walla.co.il/news/politics/383957059",
           "source": "estimate"
         },
         "v2_q13": {
@@ -6888,8 +6888,8 @@
         "v3_q2": {
           "level": 5,
           "principled": false,
-          "note": "מצע ישראל ביתנו (עודכן 4.10.26): איסור בחוק על נאשם (כתב אישום) להרכיב ממשלה",
-          "link": "https://beytenu.org.il/party-platform/",
+          "note": "ליברמן, mako 17.10.26: מיד עם השבעת הכנסת – החלפת יו\"ר הכנסת, ואז \"נעביר את 'חוק הנאשם' בשלוש קריאות\"",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-2ec9703f28a41a1026.htm",
           "source": "estimate"
         },
         "v3_q3": {
@@ -7021,8 +7021,8 @@
         "v4_q6": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "ליברמן בכנס המכינות, וואלה 11.10.26: \"באיראן הכרעה היא רק הפלת והחלפת המשטר\"",
+          "link": "https://www.walla.co.il/news/politics/383957059",
           "source": "estimate"
         },
         "v4_q7": {
@@ -7210,8 +7210,8 @@
         "v6_q3": {
           "level": 2,
           "principled": false,
-          "note": "ליברמן, ynet 23.9.26: הח\"כים הערבים 'לא באים בחשבון', כולל רע\"מ; ממשלה ציונית בלבד",
-          "link": "https://www.ynet.co.il/news/elections2026/article/rjh8kyb5gx",
+          "note": "ליברמן ב-X, JPost 15.10.26: קואליציה של מפלגות ציוניות בלבד – \"No Ra'am, no Joint List, no Shas, and no UTJ\"; לא יתמוך בממשלת מיעוט",
+          "link": "https://www.jpost.com/israel-election-2026/article-911855",
           "source": "estimate"
         },
         "v6_q4": {
@@ -7259,8 +7259,8 @@
         "v6_q10": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "ליברמן, ynet 13.10.26: חוק שיקבע ש\"מממנים רק חינוך ממלכתי\"; פירוק החינוך העצמאי ו'אל המעיין'; \"נשבור את כל הכלים\"",
+          "link": "https://www.ynet.co.il/news/elections2026/article/ryo0erssze",
           "source": "estimate"
         },
         "v6_q11": {
@@ -7308,15 +7308,15 @@
         "v7_q3": {
           "level": 5,
           "principled": true,
-          "note": "ליברמן, ynet 22.2.26: חוק 'גיוס לכולם' בלי מכסות, יעדים ופטורים – תנאי לקואליציה; מצע: שלילת זכויות למשתמטים",
-          "link": "https://www.ynet.co.il/news/article/r1dx1qo00ze",
+          "note": "ליברמן בכנס המכינות בחיפה, וואלה 11.10.26: גיוס לכולם (צבאי/אזרחי) – \"תנאי מוקדם להקמת הממשלה. אין פשרות על הסעיף הזה\"",
+          "link": "https://www.walla.co.il/news/politics/383957059",
           "source": "estimate"
         },
         "v7_q4": {
           "level": 5,
           "principled": false,
-          "note": "ליברמן, ynet 22.2.26: גיוס לכולם – יהודים, מוסלמים, נוצרים, דרוזים וצ'רקסים, במסלול צבאי או אזרחי",
-          "link": "https://www.ynet.co.il/news/article/r1dx1qo00ze",
+          "note": "ליברמן בכנס המכינות, וואלה 11.10.26: חובת השירות תחול על כולם, לרבות חרדים, ערבים, נוצרים וצ'רקסים; מסלול אזרחי בניהול משרד הביטחון",
+          "link": "https://www.walla.co.il/news/politics/383957059",
           "source": "estimate"
         },
         "v7_q5": {
@@ -7385,8 +7385,8 @@
         "v7_q14": {
           "level": 4,
           "principled": false,
-          "note": "מצע ישראל ביתנו (עודכן 4.10.26): לימודי ליבה חובה כתנאי לתמיכה ממשלתית; מוסד שלא יעמוד – לא יתוקצב",
-          "link": "https://beytenu.org.il/party-platform/",
+          "note": "ליברמן, ynet 13.10.26: מימון רק לחינוך ממלכתי; \"מי שרוצה חינוך פרטי שהוא יחפש כסף לבד\" – מוסד חרדי עצמאי במימון פרטי בלבד",
+          "link": "https://www.ynet.co.il/news/elections2026/article/ryo0erssze",
           "source": "estimate"
         },
         "v7_q15": {
@@ -7626,8 +7626,8 @@
         "v3_q2": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "גנץ, סרוגים (103FM) 18.10.26: 'ביבי לא יהיה ראש הממשלה' – אך מציע לו תפקידים חלופיים (רה\"מ חליפי, יו\"ר חוץ וביטחון) כדי לעקוף את המגבלה המשפטית",
+          "link": "https://www.srugim.co.il/101013749-%D7%91%D7%A0%D7%99-%D7%92%D7%A0%D7%A5-%D7%91%D7%98%D7%95%D7%97-%D7%94%D7%95%D7%90-%D7%9C%D7%90-%D7%99%D7%94%D7%99%D7%94-%D7%A8%D7%90%D7%A9-%D7%9E%D7%9E%D7%A9%D7%9C%D7%94",
           "source": "estimate"
         },
         "v3_q3": {
@@ -8395,8 +8395,8 @@
         "v3_q6": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "מצע המילואימניקים לפי JNS 19.10.26: פיצול תפקידי הייעוץ והתביעה של היועמ\"ש; שינויים משפטיים 'בהסכמה רחבה'",
+          "link": "https://www.jns.org/feature/israels-political-parties-explained-the-reservists-and-the-new-economic-party",
           "source": "estimate"
         },
         "v3_q7": {
@@ -8479,8 +8479,8 @@
         "v4_q3": {
           "level": 4,
           "principled": false,
-          "note": "מצע המילואימניקים: נפעל למנוע מדינה פלסטינית בצירים הדיפלומטיים והמדיניים",
-          "link": "https://www.themiluimnikim.org.il/platform/",
+          "note": "הנדל, ערוץ 7 1.10.26: על גולן – 'הוא בעד מדינה פלסטינית, אני נגד'; בעד ההתיישבות ביו\"ש ופרויקט החוות",
+          "link": "https://www.inn.co.il/news/707482",
           "source": "estimate"
         },
         "v4_q4": {
@@ -8563,8 +8563,8 @@
         "v4_q15": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "הנדל לפי JNS 19.10.26: פעולה יזומה והרחבת ייצור הנשק המקומי",
+          "link": "https://www.jns.org/feature/israels-political-parties-explained-the-reservists-and-the-new-economic-party",
           "source": "estimate"
         },
         "v5_q1": {
@@ -8589,17 +8589,17 @@
           "source": "estimate"
         },
         "v5_q4": {
-          "level": 5,
+          "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "זליכה בהצגת תוכניתו, וואלה 15.10.26: הפחתת מע\"מ בהדרגה עד 12% ומס הכנסה עד שיעור מרבי של 40%; ביטול מס יסף",
+          "link": "https://www.walla.co.il/news/politics/383957610",
           "source": "estimate"
         },
         "v5_q5": {
           "level": 5,
           "principled": true,
-          "note": "תחרות ויוקר המחיה — זליכה",
-          "link": "",
+          "note": "זליכה, JPost 13.10.26: ביטול כל המכסים 'ללא יוצא מן הכלל' ומכסות היבוא; איסור בלעדיות יבוא למונופולים",
+          "link": "https://www.jpost.com/israel-news/politics-and-diplomacy/article-911605",
           "source": "estimate"
         },
         "v5_q6": {
@@ -8689,8 +8689,8 @@
         "v6_q3": {
           "level": 2,
           "principled": true,
-          "note": "הנדל, JDN 6.9.26: 'צריך להקים ממשלה ציונית, ללא מפלגות חרדיות וערביות' – תנאי לממשלה",
-          "link": "https://www.jdn.co.il/news/2724045/",
+          "note": "הנדל, ynet 13.10.26: 'לא אשב עם מפלגות חרדיות וגם לא אשב עם מפלגות ערביות'; זליכה (JPost 13.10): לא בממשלה עם מפלגות ערביות",
+          "link": "https://www.ynet.co.il/news/elections2026/article/sywy11bjize",
           "source": "estimate"
         },
         "v6_q4": {
@@ -8787,15 +8787,15 @@
         "v7_q3": {
           "level": 5,
           "principled": true,
-          "note": "מצע המילואימניקים: חוק גיוס לכולם כתנאי להקמת ממשלה; משתמט – בלי זכות בחירה, קצבאות והטבות",
-          "link": "https://www.themiluimnikim.org.il/platform/",
+          "note": "הנדל, ערוץ 7 1.10.26: 'מוסד שמעודד השתמטות לא צריך לקבל שקל'; 'כשאתה יושב עם נתניהו וחרדים – לא יהיה גיוס'",
+          "link": "https://www.inn.co.il/news/707482",
           "source": "estimate"
         },
         "v7_q4": {
           "level": 5,
           "principled": false,
-          "note": "מצע המילואימניקים: כל אזרח, יהודי וערבי, ישרת בגיל 18 – צבאית או אזרחית",
-          "link": "https://www.themiluimnikim.org.il/platform/",
+          "note": "הנדל, ערוץ 7 1.10.26: 'כל אזרח – ערבי, חרדי, חילוני... צריך לעשות משהו למען המדינה'; זליכה: שירות לאומי לערבים",
+          "link": "https://www.inn.co.il/news/707482",
           "source": "estimate"
         },
         "v7_q5": {
@@ -8815,8 +8815,8 @@
         "v7_q7": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "מצע המילואימניקים לפי JNS 19.10.26: למשתמט – שלילת רישיון נהיגה והגבלות יציאה לחו\"ל; 'מי שלא משרת לא מקבל כלום'",
+          "link": "https://www.jns.org/feature/israels-political-parties-explained-the-reservists-and-the-new-economic-party",
           "source": "estimate"
         },
         "v7_q8": {
@@ -8869,10 +8869,10 @@
           "source": "estimate"
         },
         "v7_q15": {
-          "level": 4,
+          "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "מצע המילואימניקים לפי JNS 19.10.26: שלילת זכות הבחירה וההיבחרות ממי שמסרב לשרת, לצד שלילת רישיון והגבלת יציאה לחו\"ל",
+          "link": "https://www.jns.org/feature/israels-political-parties-explained-the-reservists-and-the-new-economic-party",
           "source": "estimate"
         },
         "v7_q16": {
@@ -9636,8 +9636,8 @@
         "v1_q1": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "גולן, ערוץ 7 16.10.26: \"הפרדה ברורה בין דת למדינה\"; mako 3.10: קואליציה \"שמבינה הפרדת דת ממדינה\"",
+          "link": "https://www.inn.co.il/news/708628",
           "source": "estimate"
         },
         "v1_q2": {
@@ -9664,15 +9664,15 @@
         "v1_q5": {
           "level": 3,
           "principled": false,
-          "note": "מצע הדמוקרטים 4.26: מערך נישואין אזרחיים מקביל לרבנות, לזוגות יהודים, מעורבים, להט\"בים וחסרי דת",
-          "link": "https://democrats.org.il/wp-content/uploads/2026/04/vision0426.pdf",
+          "note": "גולן לפעילים בחו\"ל (הקלטה, ערוץ 14), ערוץ 7 16.10.26: \"יהיה אפשר להתחתן נישואים אזרחיים בישראל\" – אחד משני \"דגלים מרכזיים\"",
+          "link": "https://www.inn.co.il/news/708628",
           "source": "estimate"
         },
         "v1_q6": {
           "level": 3,
           "principled": false,
-          "note": "מצע הדמוקרטים 4.26: שבת יום מנוחה; תח\"צ מצומצמת באזורים חילוניים, תרבות פתוחה; גולן (JPost 1.10): עסק שרוצה ייפתח",
-          "link": "https://democrats.org.il/wp-content/uploads/2026/04/vision0426.pdf",
+          "note": "גולן, ערוץ 7 16.10.26: \"תהיה תחבורה ציבורית בשבת\"; הבהיר: \"אני מתנגד נחרצות לכפייה\"",
+          "link": "https://www.inn.co.il/news/708628",
           "source": "estimate"
         },
         "v1_q7": {
@@ -9895,15 +9895,15 @@
         "v3_q9": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "גולן, זמן ישראל 18.10.26: \"נילחם בטרור הפלסטיני ובטרור היהודי... ביד ברזל ובלי שום הנחות\"; יפנה מאחזים בלתי חוקיים",
+          "link": "https://www.zman.co.il/live/734304/",
           "source": "estimate"
         },
         "v3_q10": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "גולן, זמן ישראל 18.10.26: \"אני אדאג להחזיר את המעצרים המנהליים\" נגד פעילי טרור יהודי מסוכנים, כחלק ממאבק בטרור",
+          "link": "https://www.zman.co.il/live/734366/",
           "source": "estimate"
         },
         "v3_q11": {
@@ -9944,15 +9944,15 @@
         "v4_q1": {
           "level": 3,
           "principled": false,
-          "note": "מצע הדמוקרטים 4.26: פירוז עזה, נוכחות ופיקוח ביטחוני ישראלי בגבולות ובמעברים, מסגרת ערבית-בינלאומית וממשל אזרחי מתון",
-          "link": "https://democrats.org.il/wp-content/uploads/2026/04/vision0426.pdf",
+          "note": "גולן, mako 3.10.26: עיקרון ראשון לקואליציה – \"צריך ליצור שלטון חלופי לחמאס בתוך רצועת עזה\"; הארץ 9.10: נתניהו מנציח את שלטון חמאס",
+          "link": "https://www.mako.co.il/news-politics/2026_q4/Article-35e804495aef0a1027.htm",
           "source": "estimate"
         },
         "v4_q2": {
           "level": 2,
           "principled": false,
-          "note": "הדמוקרטים, ynet 28.9.26: היפרדות במהלך אזורי עם ארה\"ב ומדינות ערב, ערבויות ביטחוניות; במצע: שליטה בבקעה",
-          "link": "https://www.ynet.co.il/news/elections2026/article/yokra14910407",
+          "note": "גולן, mako 3.10.26: הבחירה בין סיפוח להיפרדות; \"סיפוח של חמישה מיליון פלסטינים זה חיסולה של מדינת ישראל\"",
+          "link": "https://www.mako.co.il/news-politics/2026_q4/Article-35e804495aef0a1027.htm",
           "source": "estimate"
         },
         "v4_q3": {
@@ -9979,8 +9979,8 @@
         "v4_q6": {
           "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "גולן, הארץ 9.10.26: חיסול חמינאי \"היה טעות\" בלי מהלך מדיני אזורי; המלחמה עם איראן \"הרעה את מצבה האסטרטגי של ישראל\"",
+          "link": "https://www.haaretz.co.il/news/elections/2026-10-09/ty-article/000001a1-211f-d10a-a5b1-a11f2aa40000",
           "source": "estimate"
         },
         "v4_q7": {
@@ -10049,15 +10049,15 @@
         "v5_q1": {
           "level": 2,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "גולן, ערוץ 7 16.10.26: \"סילוק הדת מהמרחב הציבורי\"; \"מדרכות ואוטובוסים לא יחולקו לפי מגדר\"; לצד \"מתנגד נחרצות לכפייה\"",
+          "link": "https://www.inn.co.il/news/708628",
           "source": "estimate"
         },
         "v5_q2": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "גולן, ערוץ 7 16.10.26: \"הפרדה ברורה בין דת למדינה\"; נישואין אזרחיים בישראל כדגל מרכזי",
+          "link": "https://www.inn.co.il/news/708628",
           "source": "estimate"
         },
         "v5_q3": {
@@ -10168,8 +10168,8 @@
         "v6_q3": {
           "level": 5,
           "principled": true,
-          "note": "גולן, הארץ 27.9.26: תומך בשילוב ערבים בממשלה; JPost 1.10: השתתפות מפלגה ערבית \"טבעית, נכונה\"",
-          "link": "https://www.haaretz.co.il/news/elections/2026-09-27/ty-article/.premium/000001a0-e100-dfbb-afa4-f350d1be0000",
+          "note": "גולן בראיון, mako 3.10.26: \"שותפות יהודית-ערבית בממשלה היא דבר חיובי\"; עבאס \"היה שותף טוב בממשלה ההיא\"",
+          "link": "https://www.mako.co.il/news-politics/2026_q4/Article-35e804495aef0a1027.htm",
           "source": "estimate"
         },
         "v6_q4": {
@@ -10626,15 +10626,15 @@
         "v3_q8": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "ח\"כ חוג'יראת (רע\"ם), i24 9.10.26: לפני שתילות (ייעור) בנגב צריך לטפל בבעיות הבדואים",
+          "link": "https://www.i24news.tv/he/news/i24news-shows/cabinet-shishi/artc-e43d4e26",
           "source": "estimate"
         },
         "v3_q9": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "עבאס, רויטרס/JPost 19.10.26: רוצה ממשלה שתעצור את הרחבת ההתנחלויות ותטפל בכישלון בעצירת תקיפות מתנחלים",
+          "link": "https://www.jpost.com/israel-election-2026/article-912145",
           "source": "estimate"
         },
         "v3_q10": {
@@ -10710,8 +10710,8 @@
         "v4_q5": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "ח\"כ חוג'יראת (רע\"ם), i24 9.10.26: נשאל על המשך הסיכולים בעזה – \"צריך להמשיך במדיניות השלום\"",
+          "link": "https://www.i24news.tv/he/news/i24news-shows/cabinet-shishi/artc-e43d4e26",
           "source": "estimate"
         },
         "v4_q6": {
@@ -10731,8 +10731,8 @@
         "v4_q8": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "עבאס, רויטרס/JPost 19.10.26: רוצה ממשלה שתסיים את המלחמות ותביא \"ביטחון משותף ושלום לפלסטינים ולישראלים\"",
+          "link": "https://www.jpost.com/israel-election-2026/article-912145",
           "source": "estimate"
         },
         "v4_q9": {
@@ -10906,8 +10906,8 @@
         "v6_q3": {
           "level": 5,
           "principled": true,
-          "note": "עבאס, ynet 26.8.26: להחליף את הממשלה בממשלה שבה לציבור הערבי \"תפקיד ממשי\"; ב-27.7: \"תזמינו אותנו לקואליציה\"",
-          "link": "https://www.ynet.co.il/news/elections2026/article/rjnwqfhwzg",
+          "note": "עבאס, רויטרס/JPost 19.10.26: \"נוכל להבטיח הקמת ממשלת שינוי חדשה\"; סגלוביץ' במקום 2 – \"מסר של שותפות\" עם הציבור היהודי",
+          "link": "https://www.jpost.com/israel-election-2026/article-912145",
           "source": "estimate"
         },
         "v6_q4": {
@@ -11123,8 +11123,8 @@
         "v1_q2": {
           "level": 1,
           "principled": true,
-          "note": "מדינת כל אזרחיה",
-          "link": "",
+          "note": "ג'בארין, סרטון 10.10.26 (ערבי21 11.10): תמיכה בממשלה חלופית לא תבוא במחיר קבלת חוק הלאום או הצבעה בעד תקציבי מלחמה והתנחלות",
+          "link": "https://arabi21.com/story/1794975",
           "source": "estimate"
         },
         "v1_q3": {
@@ -11361,15 +11361,15 @@
         "v3_q7": {
           "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "ג'בארין, 103FM (ערוץ 7 13.10.26): דורש \"תוכנית מקיפה, ממומנת ומציאותית\" נגד ארגוני הפשיעה; i24 10.10: עם לו\"ז, תקציב ופיקוח",
+          "link": "https://www.israelnationalnews.com/news/434541",
           "source": "estimate"
         },
         "v3_q8": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "ג'בארין, סרטון 10.10.26 (ערבי21 11.10; ToI 11.10): תנאי לתמיכה – עצירת הריסות בתים והכרה בכפרים הבלתי מוכרים בנגב",
+          "link": "https://arabi21.com/story/1794975",
           "source": "estimate"
         },
         "v3_q9": {
@@ -11431,15 +11431,15 @@
         "v4_q2": {
           "level": 1,
           "principled": true,
-          "note": "המשותפת, ynet 28.9.26: לפנות \"לאלתר\" את כל ההתנחלויות, כולל מזרח ירושלים, מעלה אדומים ואריאל",
-          "link": "https://www.ynet.co.il/news/elections2026/article/yokra14910407",
+          "note": "ג'בארין, ועידת ynet 13.10.26: \"כל העולם תומך בהקמת מדינה פלסטינית לצד ישראל בגבולות 67\"; אוסלו רק הרחיב התנחלויות",
+          "link": "https://www.ynetnews.com/article/cl2b2ns8f",
           "source": "estimate"
         },
         "v4_q3": {
           "level": 1,
           "principled": true,
-          "note": "ג'בארין, JPost 1.9.26: הרשימה תדחוף למו\"מ מחודש להקמת מדינה פלסטינית לצד ישראל",
-          "link": "https://www.jpost.com/israel-election-2026/article-907154",
+          "note": "ג'בארין, 103FM (ערוץ 7 13.10.26): \"התוכנית המדינית שלנו – מדינה פלסטינית בגבולות 67\"; JNS 14.10: התנאי החשוב מבין דרישות הרשימה",
+          "link": "https://www.israelnationalnews.com/news/434541",
           "source": "estimate"
         },
         "v4_q4": {
@@ -11473,8 +11473,8 @@
         "v4_q8": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "ג'בארין, ועידת ynet 13.10.26: \"יש כאן שני עמים והפתרון היחיד הוא שלום צודק\"; אופק מדיני שמביא תקווה, שלום ושגשוג",
+          "link": "https://www.ynetnews.com/article/cl2b2ns8f",
           "source": "estimate"
         },
         "v4_q9": {
@@ -11501,8 +11501,8 @@
         "v4_q12": {
           "level": 1,
           "principled": false,
-          "note": "מצע כלכלי של המשותפת: קיצוץ עמוק בהוצאות הצבאיות והפסקת מימון המלחמה, לטובת חינוך, בריאות ושירותים",
-          "link": "https://jointlist.org.il/he/economic-plan/",
+          "note": "ג'בארין, סרטון 10.10.26 (ערבי21 11.10): הרשימה לא תצביע בעד \"תקציבי המלחמה וההתנחלות\" גם תמורת השפעה פוליטית",
+          "link": "https://arabi21.com/story/1794975",
           "source": "estimate"
         },
         "v4_q13": {
@@ -11648,8 +11648,8 @@
         "v6_q3": {
           "level": 5,
           "principled": true,
-          "note": "ג'בארין, JPost 1.9.26: תמיכה בממשלה חלופית תלויה במו\"מ על דרישות הרשימה; תוקפת חרם על מפלגות ערביות",
-          "link": "https://www.jpost.com/israel-election-2026/article-907154",
+          "note": "ג'בארין, ToI 11.10.26: מוכנה לתת \"רשת ביטחון\" מבחוץ לממשלה חלופית, בתנאים – \"לא צ'ק פתוח\"; \"חופש פעולה מלא להחלפת ממשלת נתניהו\"",
+          "link": "https://www.timesofisrael.com/joint-list-says-it-will-provide-safety-net-for-any-anti-netanyahu-coalition-report/",
           "source": "estimate"
         },
         "v6_q4": {
@@ -11753,8 +11753,8 @@
         "v7_q4": {
           "level": 1,
           "principled": false,
-          "note": "המשותפת, ynet 16.9.26: מתנגדת לכל צורה של גיוס חובה ולסנקציות על מי שלא מתגייס",
-          "link": "https://www.ynetnews.com/article/sjph72wyzx",
+          "note": "ג'בארין, 103FM (ערוץ 7 13.10.26): \"לא נקבל שום כפייה מצד השלטונות להסדר הקשור לשירות לאומי\"",
+          "link": "https://www.israelnationalnews.com/news/434541",
           "source": "estimate"
         },
         "v7_q5": {
