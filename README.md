@@ -27,11 +27,25 @@
 
 ## השרת (Apps Script)
 השמירה, הניתוח המילולי והמיילים רצים ב-Google Apps Script שצמוד לגיליון.
-`config.js` הוא מה שמחבר ביניהם. העותק של הקוד נמצא ב-`apps-script/Code.gs`,
-אבל מה שרץ בפועל הוא מה שמודבק בעורך של Apps Script — אחרי שינוי בקובץ:
-1. להדביק אותו בעורך ולשמור
-2. Deploy → Manage deployments → עריכה → Version: New version → Deploy (הכתובת לא משתנה)
-3. בפעם הראשונה בלבד: להריץ את `setupTrigger` מהעורך
+`config.js` הוא מה שמחבר ביניהם. הקוד נמצא ב-`apps-script/Code.gs`.
+
+**פריסה אוטומטית:** כל מיזוג ל-main שמשנה את `apps-script/` מריץ את
+`.github/workflows/deploy-apps-script.yml`, שדוחף את הקוד ל-Apps Script ופורס גרסה
+חדשה באותה כתובת. אפשר גם להריץ ידנית: Actions → פריסת Apps Script → Run workflow.
+
+הגדרה חד-פעמית:
+1. https://script.google.com/home/usersettings → להפעיל את Google Apps Script API
+2. במחשב (או ב-Google Cloud Shell, shell.cloud.google.com, שעובד גם מהטלפון):
+   `npx @google/clasp@2.4.2 login --no-localhost`, לאשר בדפדפן, ואז `cat ~/.clasprc.json`
+3. בריפו: Settings → Secrets and variables → Actions
+   - Secrets → New repository secret: השם `CLASPRC_JSON`, הערך — כל התוכן של הקובץ מסעיף 2
+   - Variables → New repository variable: השם `APPS_SCRIPT_ID`, הערך — Project Settings → Script ID בעורך
+
+**כשהקוד צריך הרשאה חדשה מגוגל** (למשל טריגרים או שירות שלא היה בשימוש), הפריסה
+האוטומטית לא יכולה לאשר אותה: אחרי הפריסה צריך להריץ פונקציה אחת מהעורך (Run) ולאשר.
+עד אז ה-Web app עלול להחזיר שגיאת הרשאה — לכן שינוי כזה עדיף להדביק ולאשר ידנית לפני המיזוג.
+
+בפעם הראשונה בלבד: להריץ את `setupTrigger` מהעורך.
 
 `setupTrigger` יוצר טריגר שרץ כל 5 דקות: משלים ניתוחים שנכשלו (כולל משיבים ותיקים,
 בלי לשלוח להם מייל) ושולח את מייל הניתוח למי שסימן זאת בטופס.

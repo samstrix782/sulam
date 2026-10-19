@@ -726,10 +726,10 @@ async function submitAnswers(){
     profile:{ answered:answered(), total:qs.length,
       redlines_by_value:Object.fromEntries(S.q.values.map(v=>[v.name, v.questions.filter(q=>S.answers[q.id]&&S.answers[q.id].principled).length])) },
     parties:cands.map(({p,s})=>({ name:p.name, letters:p.letters||'', leader:p.leader, match_pct:s.pct, components:p.components,
-      user_redlines_crossed:s.redlines.map(r=>({value:r.q.value.name,question:r.q.title,user:r.a.level+' — '+(r.q.rungs.find(x=>x.level===r.a.level)||{}).text,party:r.t.level+' — '+(r.q.rungs.find(x=>x.level===r.t.level)||{}).text,party_note:r.t.note})),
-      party_principles_user_far_from:s.theirs.map(r=>({value:r.q.value.name,question:r.q.title,user:r.a.level,party:r.t.level+' — '+(r.q.rungs.find(x=>x.level===r.t.level)||{}).text,party_note:r.t.note})),
+      user_redlines_crossed:s.redlines.map(r=>({value:r.q.value.name,question:r.q.title,user:r.a.level+' — '+(r.q.rungs.find(x=>x.level===r.a.level)||{}).text,party:r.t.level+' — '+(r.q.rungs.find(x=>x.level===r.t.level)||{}).text,party_note:r.t.note,estimate:r.t.source==='estimate'})),
+      party_principles_user_far_from:s.theirs.map(r=>({value:r.q.value.name,question:r.q.title,user:r.a.level,party:r.t.level+' — '+(r.q.rungs.find(x=>x.level===r.t.level)||{}).text,party_note:r.t.note,estimate:r.t.source==='estimate'})),
       agreements:qs.filter(q=>S.answers[q.id]&&S.answers[q.id].level&&p.tags[q.id]&&p.tags[q.id].level&&Math.abs(S.answers[q.id].level-p.tags[q.id].level)<=1&&(S.answers[q.id].principled||p.tags[q.id].principled))
-        .map(q=>({value:q.value.name,question:q.title,user:S.answers[q.id].level,party:p.tags[q.id].level,user_redline:!!S.answers[q.id].principled,party_principle:!!p.tags[q.id].principled,party_note:p.tags[q.id].note})),
+        .map(q=>({value:q.value.name,question:q.title,user:S.answers[q.id].level,party:p.tags[q.id].level,user_redline:!!S.answers[q.id].principled,party_principle:!!p.tags[q.id].principled,party_note:p.tags[q.id].note,estimate:p.tags[q.id].source==='estimate'})),
       by_value:Object.fromEntries(S.q.values.map(v=>[v.name, s.byValue[v.id]?s.byValue[v.id].pct:null])) })),
   };
   const scores=Object.fromEntries(rows.map(r=>[r.p.id, r.s.pct]));

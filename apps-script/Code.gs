@@ -507,20 +507,24 @@ function buildPacket_(data, answers) {
     },
     parties: ranked.slice(0, TOP_N).map(({ p, s }) => ({
       name: p.name, letters: p.letters || '', leader: p.leader, match_pct: s.pct, components: p.components,
-      user_redlines_crossed: s.redlines.map(r => ({ value: r.v.name, question: r.q.title, user: rung(r.q, r.a.level), party: rung(r.q, r.t.level), party_note: r.t.note })),
-      party_principles_user_far_from: s.theirs.map(r => ({ value: r.v.name, question: r.q.title, user: r.a.level, party: rung(r.q, r.t.level), party_note: r.t.note })),
+      user_redlines_crossed: s.redlines.map(r => ({ value: r.v.name, question: r.q.title, user: rung(r.q, r.a.level), party: rung(r.q, r.t.level), party_note: r.t.note, estimate: r.t.source === 'estimate' })),
+      party_principles_user_far_from: s.theirs.map(r => ({ value: r.v.name, question: r.q.title, user: r.a.level, party: rung(r.q, r.t.level), party_note: r.t.note, estimate: r.t.source === 'estimate' })),
       agreements: qs.filter(({ q }) => {
         const a = answers[q.id], t = p.tags[q.id];
         return a && a.level && t && t.level && Math.abs(a.level - t.level) <= 1 && (a.principled || t.principled);
       }).map(({ q, v }) => ({ value: v.name, question: q.title, user: answers[q.id].level, party: p.tags[q.id].level,
-        user_redline: !!answers[q.id].principled, party_principle: !!p.tags[q.id].principled, party_note: p.tags[q.id].note })),
+        user_redline: !!answers[q.id].principled, party_principle: !!p.tags[q.id].principled, party_note: p.tags[q.id].note, estimate: p.tags[q.id].source === 'estimate' })),
       by_value: Object.fromEntries(values.map(v => [v.name, s.byValue[v.id] ? s.byValue[v.id].pct : null]))
     }))
   };
 }
 
 /* ---------- analysis ---------- */
-const SYSTEM = `אתה מנתח שאלון ערכים לבחירות לכנסת ה-26. המשתמש ענה על סולמות של 1–5 בשבעה ערכים וסימן לכל שאלה אם היא "קו אדום" בשבילו או פתוחה לדיון. המפלגות תויגו על אותם סולמות על ידי מחבר השאלון (שמוליק), לפי הצבעות בכנסת כפי שהוא מבין אותן, וגם אצלן סומן מה עקרוני ומה סחיר. התיוג הוא שלו, לא שלך — אל תוסיף ידע חיצוני על המפלגות ואל תתקן אותו; כתוב "לפי התיוג" כשזה רלוונטי.
+const SYSTEM = `אתה מנתח שאלון ערכים לבחירות לכנסת ה-26. המשתמש ענה על סולמות של 1–5 בשבעה ערכים וסימן לכל שאלה אם היא "קו אדום" בשבילו או פתוחה לדיון. המפלגות תויגו על אותם סולמות בשאלון, לפי הצבעות, מצעים, ראיונות והצהרות של הרשימות ומועמדיהן, וגם אצלן סומן מה עקרוני ומה סחיר. התיוג הוא נתון, לא שלך — אל תוסיף ידע חיצוני על המפלגות ואל תתקן אותו; כתוב "לפי התיוג" כשזה רלוונטי.
+
+חלק מהתיוג הוא הערכה שטרם אושרה: פריט כזה מסומן בחומר ב-"estimate": true. נקודה שנשענת על פריט כזה — כתוב בה "לפי הערכה" ואל תציג אותה כעובדה. אם רוב מה שמבדיל רשימה מסוים נשען על הערכות, אמור זאת במשפט הפשרה שלה.
+
+הטקסט מוצג למשתמש במסך ונשלח אליו במייל: פנה אליו ישירות, בגוף שני. אל תזכיר את מחבר השאלון או אנשים אחרים בשמם, חוץ ממועמדי הרשימות כפי שהם בחומר.
 
 המשימה: להחזיר 2–3 מפלגות אפשריות למשתמש, לא אחת. בחר לפי ההתאמה הכללית, אבל בעיקר לפי מה שסומן כמשמעותי משני הצדדים: קו אדום של המשתמש שהמפלגה חוצה הוא סיבה כבדה נגד; עיקרון של המפלגה שהמשתמש קרוב אליו הוא סיבה כבדה בעד. אם המפלגה עם ההתאמה המספרית הגבוהה ביותר חוצה קו אדום, אמור זאת במפורש ואל תדחוק אותה — תן למשתמש להחליט.
 
