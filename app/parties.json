@@ -3,7 +3,7 @@
     "election": "הכנסת ה-26, 27.10.2026",
     "note": "הרשימות כפי שהוגשו ב-8–9.9.2026. האותיות טעונות אישור ועדת הבחירות. רשימות שאינן קרובות לאחוז החסימה הושמטו — אפשר להוסיף.",
     "tagger": "שמוליק קרסיק",
-    "tagging_note": "טיוטה ראשונה: הערכות של Claude לפי היכרות כללית עם המפלגות, לא מול הצבעה ספציפית. source=estimate עד שתוקן. רשימות חדשות (עמך ישראל, המילואימניקים, ישראל תחילה, נעם) — ביטחון נמוך. סבב 2026-10-05: נושאי ליבה לכל הרשימות מול מקורות שנפתחו ונבדקו; כל שינוי עם הערה וקישור, ועדיין source=estimate עד אישור בתיוג. סבב 2026-10-19: ראיונות, מצעים ופרסומים מ-1.10 עד 19.10; 12 שינויי רמה ו-104 מקורות חדשים שמאשרים רמה קיימת, כולם מול עמוד שנפתח ונבדק; עדיין source=estimate עד אישור בתיוג."
+    "tagging_note": "טיוטה ראשונה: הערכות של Claude לפי היכרות כללית עם המפלגות, לא מול הצבעה ספציפית. source=estimate עד שתוקן. רשימות חדשות (עמך ישראל, המילואימניקים, ישראל תחילה, נעם) — ביטחון נמוך. סבב 2026-10-05: נושאי ליבה לכל הרשימות מול מקורות שנפתחו ונבדקו; כל שינוי עם הערה וקישור, ועדיין source=estimate עד אישור בתיוג. סבב 2026-10-19: ראיונות, מצעים ופרסומים מ-1.10 עד 19.10; 12 שינויי רמה ו-104 מקורות חדשים שמאשרים רמה קיימת, כולם מול עמוד שנפתח ונבדק; עדיין source=estimate עד אישור בתיוג. השלמה 19.10: נעם, ישראל תחילה, כחול לבן, יהדות התורה ורע\"ם – 3 שינויי רמה ו-32 מקורות חדשים."
   },
   "parties": [
     {
@@ -1520,8 +1520,8 @@
         "v1_q4": {
           "level": 5,
           "principled": true,
-          "note": "גיור אורתודוקסי בלבד",
-          "link": "",
+          "note": "פרופיל JPost 10.9.26: ש\"ס ויהדות התורה מבקשות להשאיר את סמכות הגיור בידי הממסד הדתי האורתודוקסי ודוחות גיור רפורמי",
+          "link": "https://www.jpost.com/israel-election-2026/article-907982",
           "source": "estimate"
         },
         "v1_q5": {
@@ -1534,22 +1534,22 @@
         "v1_q6": {
           "level": 4,
           "principled": false,
-          "note": "גולדקנופף, וואלה 8.1.23: דרש לעצור לאלתר את עבודות הרכבת בשבת – 'לא נוכל להשלים' – לפני 2026",
-          "link": "https://news.walla.co.il/item/3550396",
+          "note": "פרופיל JPost 10.9.26: יהדות התורה מתנגדת להרחבת תחב\"צ ופעילות ממלכתית בשבת, וגם לעבודות תשתית ובנייה בשבת",
+          "link": "https://www.jpost.com/israel-election-2026/article-907982",
           "source": "estimate"
         },
         "v1_q7": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "פרופיל JPost 10.9.26: המפלגות החרדיות יזמו את החוק שביטל את רפורמת הכשרות והחזיר את הסמכויות לרבנות",
+          "link": "https://www.jpost.com/israel-election-2026/article-907982",
           "source": "estimate"
         },
         "v1_q8": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "פרופיל JPost 10.9.26: ש\"ס ויהדות התורה פועלות לשמר את סמכות המוסדות הדתיים, ובמיוחד הרבנות הראשית",
+          "link": "https://www.jpost.com/israel-election-2026/article-907982",
           "source": "estimate"
         },
         "v1_q9": {
@@ -1604,15 +1604,15 @@
         "v2_q2": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "N12 Data, מאקו 11.10.26: יהדות התורה מתנגדת לשמירת סמכות רחבה לבג\"ץ לפסול חוקים ותומכת בצמצום הביקורת השיפוטית",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-1b5d451818a21a1026.htm",
           "source": "estimate"
         },
         "v2_q3": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "N12 Data, מאקו 11.10.26: ח\"כי יהדות התורה (מול האדמו\"ר מוויז'ניץ, נוב' 2022): \"ללא פסקת התגברות אין ממשלה\"",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-1b5d451818a21a1026.htm",
           "source": "estimate"
         },
         "v2_q4": {
@@ -2080,8 +2080,8 @@
         "v6_q10": {
           "level": 5,
           "principled": true,
-          "note": "תקצוב שווה לתלמיד",
-          "link": "",
+          "note": "פרופיל JPost 10.9.26: יהדות התורה וש\"ס דורשות מימון מדינה למוסדות חרדיים שאינם מלמדים ליבה ונאבקות לשמר ולהגדיל את תקציביהם",
+          "link": "https://www.jpost.com/israel-election-2026/article-907982",
           "source": "estimate"
         },
         "v6_q11": {
@@ -2206,8 +2206,8 @@
         "v7_q14": {
           "level": 1,
           "principled": true,
-          "note": "אוטונומיה חינוכית",
-          "link": "",
+          "note": "פרופיל JPost 10.9.26: יהדות התורה דורשת מימון מדינה מלא למוסדות חרדיים שאינם מלמדים לימודי ליבה",
+          "link": "https://www.jpost.com/israel-election-2026/article-907982",
           "source": "estimate"
         },
         "v7_q15": {
@@ -3734,15 +3734,15 @@
         "v1_q3": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "אתר נעם לישראל 8.10.26: 'מיהו יהודי זו שאלה הלכתית' – יהודי רק מי שנולד לאם יהודייה או התגייר כהלכה; קורא לתקן את 'הפרצה'",
+          "link": "https://www.noamlisrael.org.il/chabad/",
           "source": "estimate"
         },
         "v1_q4": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "אתר נעם לישראל, עמוד 'דבריו של הרבי' 8.10.26: מעוז הגיש הצעות חוק לביטול ההכרה בגיורים רפורמים וקונסרבטיביים; 'יהודי' במרשם לפי ההלכה",
+          "link": "https://www.noamlisrael.org.il/chabad/",
           "source": "estimate"
         },
         "v1_q5": {
@@ -3769,15 +3769,15 @@
         "v1_q8": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "מצע נעם לישראל באתר (2026) ועמוד 8.10.26: חיזוק מעמד הרבנות הראשית והסדרת מעמד הכותל",
+          "link": "https://www.noamlisrael.org.il/chabad/",
           "source": "estimate"
         },
         "v1_q9": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "אתר נעם לישראל 8.10.26: מעוז נלחם ב'חילול' הכותל בידי רפורמים וקונסרבטיבים ובעד חוק הכותל; עמוד הפעילים 24.9: נגד רחבה רפורמית",
+          "link": "https://www.noamlisrael.org.il/chabad/",
           "source": "estimate"
         },
         "v1_q10": {
@@ -3797,8 +3797,8 @@
         "v1_q12": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "אתר נעם לישראל 8.10.26: מעוז קידם חוק להחלת ריבונות על כל חלקי יהודה ושומרון 'שלא יופקר אף שעל'",
+          "link": "https://www.noamlisrael.org.il/chabad/",
           "source": "estimate"
         },
         "v1_q13": {
@@ -3832,8 +3832,8 @@
         "v2_q3": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "נעם לישראל, ערוץ 7 13.8.26: מתחייבת להעביר פסקת התגברות עוד לפני השבעת הממשלה (רוב לא צוין)",
+          "link": "https://www.inn.co.il/news/703941",
           "source": "estimate"
         },
         "v2_q4": {
@@ -3846,15 +3846,15 @@
         "v2_q5": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "נעם לישראל, ערוץ 7 13.8.26: מינוי שופטים ובכירים על ידי נבחרי הציבור, כתנאי לממשלה הבאה",
+          "link": "https://www.inn.co.il/news/703941",
           "source": "estimate"
         },
         "v2_q6": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "מצע נעם לישראל באתר (2026): פיצול תפקיד היועמ\"ש – 'יועץ בלבד ולא מטיל וטו' על החלטות הממשלה",
+          "link": "https://www.noamlisrael.org.il/",
           "source": "estimate"
         },
         "v2_q7": {
@@ -3902,8 +3902,8 @@
         "v2_q13": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "מצע נעם לישראל באתר (2026): 'מינויי אמון שיאפשרו לשרים להגשים את מדיניותם'; ערוץ 7 13.8.26: 'הפסקת שלטון הפקידים'",
+          "link": "https://www.noamlisrael.org.il/",
           "source": "estimate"
         },
         "v2_q14": {
@@ -3916,8 +3916,8 @@
         "v2_q15": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "מעוז, וואלה 26.8.26 (עתירה לפסילת רע\"ם): 'מי שאינו מקבל את ישראל כמדינת הלאום של העם היהודי אינו יכול להתמודד'",
+          "link": "https://www.walla.co.il/news/israel/3863384",
           "source": "estimate"
         },
         "v3_q1": {
@@ -4084,8 +4084,8 @@
         "v4_q9": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "עמוד הפעילים באתר נעם לישראל 24.9.26: מבקר מצב שבו 'חיילינו נהרגים כדי שלא לפגוע באוכלוסיית אויב'",
+          "link": "https://www.noamlisrael.org.il/activists/",
           "source": "estimate"
         },
         "v4_q10": {
@@ -4224,15 +4224,15 @@
         "v5_q14": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "נעם לישראל, אתר המפלגה 24.9.26: לעצור 'תכני התבוללות ואנטי-יהדות' בשידור הציבורי 'הממומן מכספנו' ולנקות תוכניות במימון זר",
+          "link": "https://www.noamlisrael.org.il/activists/",
           "source": "estimate"
         },
         "v5_q15": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "נעם לישראל, אתר המפלגה 24.9.26: זכות בחירה אמיתית להורים; במצע: ביטול אזורי רישום ווטו הורים על תכנים",
+          "link": "https://www.noamlisrael.org.il/activists/",
           "source": "estimate"
         },
         "v6_q1": {
@@ -4301,8 +4301,8 @@
         "v6_q10": {
           "level": 5,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "רפורמת החינוך של נעם לישראל (אתר, 31.8.26): תקצוב שווה לכל ילד, 'לא עוד שימוש בחרב התקציבית לכפיית תכנים'",
+          "link": "https://www.noamlisrael.org.il/education-reform/",
           "source": "estimate"
         },
         "v6_q11": {
@@ -7472,8 +7472,8 @@
         "v1_q9": {
           "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "גנץ, JPost 26.9.26: הכותל צריך לסמל גורל משותף לעם היהודי; הוויכוח על התפילה בו הפך למקור פילוג מול יהדות התפוצות; 'הכותל גדול מספיק לכולם'",
+          "link": "https://www.jpost.com/opinion/article-909742",
           "source": "estimate"
         },
         "v1_q10": {
@@ -7612,8 +7612,8 @@
         "v2_q15": {
           "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "כחול לבן, ynet (ספט' 26): נצביע בוועדת הבחירות בעד פסילת אבו שחאדה, בל\"ד ועופר כסיף בשל תמיכה בטרור והתנגדות למדינה יהודית",
+          "link": "https://www.ynet.co.il/news/article/rygf8xg5ze",
           "source": "estimate"
         },
         "v3_q1": {
@@ -7624,9 +7624,9 @@
           "source": "estimate"
         },
         "v3_q2": {
-          "level": 4,
+          "level": 3,
           "principled": false,
-          "note": "גנץ, סרוגים (103FM) 18.10.26: 'ביבי לא יהיה ראש הממשלה' – אך מציע לו תפקידים חלופיים (רה\"מ חליפי, יו\"ר חוץ וביטחון) כדי לעקוף את המגבלה המשפטית",
+          "note": "גנץ, סרוגים (103FM) 18.10.26: 'ביבי לא יהיה רה\"מ' אך יוכל לכהן כרה\"מ חליפי או שר לעניינים אסטרטגיים חרף כתב האישום; 'משפטית? התשובה היא כן'",
           "link": "https://www.srugim.co.il/101013749-%D7%91%D7%A0%D7%99-%D7%92%D7%A0%D7%A5-%D7%91%D7%98%D7%95%D7%97-%D7%94%D7%95%D7%90-%D7%9C%D7%90-%D7%99%D7%94%D7%99%D7%94-%D7%A8%D7%90%D7%A9-%D7%9E%D7%9E%D7%A9%D7%9C%D7%94",
           "source": "estimate"
         },
@@ -9203,8 +9203,8 @@
         "v4_q1": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "השכל, JPost 17.9.26: פירוק חמאס לפני מעבר לשלב ב' בעזה; דחתה את הצעת פולארד לסיפוח והתיישבות כמדיניות המפלגה",
+          "link": "https://www.jpost.com/israel-election-2026/article-908761",
           "source": "estimate"
         },
         "v4_q2": {
@@ -9476,8 +9476,8 @@
         "v6_q10": {
           "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "אתר הנתונים של ישראל תחילה (5.10.26): צמצום מנגנוני תקצוב סקטוריאליים בחינוך; ביקורת על מימון ציבורי למוסדות ללא ליבה",
+          "link": "https://israelfirst.co.il/research/",
           "source": "estimate"
         },
         "v6_q11": {
@@ -9511,8 +9511,8 @@
         "v7_q1": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "אתר הנתונים של ישראל תחילה (5.10.26): 'שירות שוויוני' – חובות שירות שאינן נקבעות לפי השתייכות מגזרית; 'עבודה במקום תלות'",
+          "link": "https://israelfirst.co.il/research/",
           "source": "estimate"
         },
         "v7_q2": {
@@ -9553,8 +9553,8 @@
         "v7_q7": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "השכל, JDN 7.10.26: 'רק מי שנותן למדינה – יקבל ממנה בחזרה'; תוקפת את 'ראש המשתמטים' ואת חוק הפטור",
+          "link": "https://www.jdn.co.il/news/2741462/",
           "source": "estimate"
         },
         "v7_q8": {
@@ -9588,8 +9588,8 @@
         "v7_q12": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "אתר הנתונים של ישראל תחילה (5.10.26): 'עבודה במקום תלות' – ביטול קצבאות ומענקים המעודדים אי-השתתפות בשוק העבודה",
+          "link": "https://israelfirst.co.il/research/",
           "source": "estimate"
         },
         "v7_q13": {
@@ -9602,15 +9602,15 @@
         "v7_q14": {
           "level": 4,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "אתר הנתונים של ישראל תחילה (5.10.26): מבקר ש-40% מהבנים החרדים לומדים ב'מוסדות פטור' ללא ליבה 'בכסף ציבורי'",
+          "link": "https://israelfirst.co.il/research/",
           "source": "estimate"
         },
         "v7_q15": {
-          "level": 4,
+          "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "השכל, JDN 7.10.26 (בתגובה לסערת סרטון 'קהל שבוי'): 'חוק אחד לכולם, שוויון בשירות ורק מי שנותן למדינה – יקבל ממנה בחזרה'",
+          "link": "https://www.jdn.co.il/news/2741462/",
           "source": "estimate"
         },
         "v7_q16": {
@@ -10486,8 +10486,8 @@
         "v2_q3": {
           "level": 1,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "N12 Data, מאקו 11.10.26: רע\"ם התנגדה ב-2023 לפסקת ההתגברות במתכונת הרפורמה; תומכת באיזונים ובלמים בין הרשויות",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-1b5d451818a21a1026.htm",
           "source": "estimate"
         },
         "v2_q4": {
@@ -10498,10 +10498,10 @@
           "source": "estimate"
         },
         "v2_q5": {
-          "level": 2,
+          "level": 3,
           "principled": false,
-          "note": "",
-          "link": "",
+          "note": "N12 Data, מאקו 11.10.26: לגבי בחירת שופטים, עבאס הדגיש את הצורך ב\"מנגנון מאוזן\"; רע\"ם תומכת באיזונים ובלמים",
+          "link": "https://www.mako.co.il/news-israel-elections/2026/Article-1b5d451818a21a1026.htm",
           "source": "estimate"
         },
         "v2_q6": {
@@ -10913,8 +10913,8 @@
         "v6_q4": {
           "level": 5,
           "principled": true,
-          "note": "תקציבים לחברה הערבית — תוכנית 550",
-          "link": "",
+          "note": "ח\"כ וליד טאהא ופעילי רע\"ם, כל אל-ערב 15.10.26: הציגו את תוכנית \"תקדם 550\" והתקציבים לחברה הערבית כהישג המרכזי בממשלה",
+          "link": "https://www.kul-alarab.com/Article/1130260",
           "source": "estimate"
         },
         "v6_q5": {
