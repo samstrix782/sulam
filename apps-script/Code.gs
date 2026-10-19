@@ -408,9 +408,13 @@ function setupTrigger() {
   Logger.log('נוצר טריגר: processPending כל 5 דקות. מכסת מייל שנותרה היום: ' + MailApp.getRemainingDailyQuota());
 }
 // נקרא מכל doGet; עובד פעם אחת בלבד (הדגל TRIGGER_OK). לעולם לא מפיל את הבקשה.
+// אם חסרה הרשאה (הבעלים עוד לא אישר ScriptApp) — מנסה שוב לכל היותר פעם ב-10 דקות,
+// כדי לא לכתוב שורת log בכל טעינת דף.
 function ensureTrigger_() {
   try {
     if (prop_('TRIGGER_OK')) return;
+    const lastErr = Number(prop_('TRIGGER_ERR_AT')) || 0;
+    if (Date.now() - lastErr < 10 * 60 * 1000) return;
     const lock = LockService.getScriptLock();
     if (!lock.tryLock(2000)) return;
     try {
@@ -420,7 +424,10 @@ function ensureTrigger_() {
       PropertiesService.getScriptProperties().setProperty('TRIGGER_OK', '1');
     } finally { lock.releaseLock(); }
   } catch (err) {
-    try { log_('ensureTrigger: ' + (err && err.message || err)); } catch (e) {}
+    try {
+      PropertiesService.getScriptProperties().setProperty('TRIGGER_ERR_AT', String(Date.now()));
+      log_('ensureTrigger: ' + (err && err.message || err));
+    } catch (e) {}
   }
 }
 
