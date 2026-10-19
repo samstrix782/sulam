@@ -63,6 +63,7 @@ const prop_ = (k) => PropertiesService.getScriptProperties().getProperty(k);
 const log_ = (msg) => sheet_('log', ['ts', 'error']).appendRow([new Date(), String(msg).slice(0, 2000)]);
 
 function doGet(e) {
+  ensureTrigger_();
   const action = e && e.parameter && e.parameter.action;
   if (action === 'tags') return out_({ tags: readTags_() });
   if (action) return out_({ ok: true });
@@ -396,13 +397,31 @@ function analysisMailText_(name, a, link) {
 }
 
 /* ---------- background: retries, backfill, mail ---------- */
-// להרצה ידנית פעם אחת מהעורך. יוצר טריגר שמריץ את processPending כל 5 דקות.
+// יוצר (מחדש) טריגר שמריץ את processPending כל 5 דקות. אפשר להריץ ידנית מהעורך,
+// אבל בדרך כלל אין צורך: ensureTrigger_ קורא לו בטעינה הראשונה של השאלון.
 function setupTrigger() {
   ScriptApp.getProjectTriggers()
     .filter(t => t.getHandlerFunction() === 'processPending')
     .forEach(t => ScriptApp.deleteTrigger(t));
   ScriptApp.newTrigger('processPending').timeBased().everyMinutes(5).create();
+  PropertiesService.getScriptProperties().setProperty('TRIGGER_OK', '1');
   Logger.log('נוצר טריגר: processPending כל 5 דקות. מכסת מייל שנותרה היום: ' + MailApp.getRemainingDailyQuota());
+}
+// נקרא מכל doGet; עובד פעם אחת בלבד (הדגל TRIGGER_OK). לעולם לא מפיל את הבקשה.
+function ensureTrigger_() {
+  try {
+    if (prop_('TRIGGER_OK')) return;
+    const lock = LockService.getScriptLock();
+    if (!lock.tryLock(2000)) return;
+    try {
+      if (prop_('TRIGGER_OK')) return;
+      const has = ScriptApp.getProjectTriggers().some(t => t.getHandlerFunction() === 'processPending');
+      if (!has) ScriptApp.newTrigger('processPending').timeBased().everyMinutes(5).create();
+      PropertiesService.getScriptProperties().setProperty('TRIGGER_OK', '1');
+    } finally { lock.releaseLock(); }
+  } catch (err) {
+    try { log_('ensureTrigger: ' + (err && err.message || err)); } catch (e) {}
+  }
 }
 
 // עובר על לשונית answers:
