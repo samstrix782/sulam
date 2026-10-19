@@ -1,7 +1,7 @@
 # פורס את apps-script/Code.gs ל-Apps Script בכל מיזוג ל-main שנוגע בו.
 #
 # הגדרה חד-פעמית (פירוט ב-README, בסעיף "השרת"):
-#   secret   CLASPRC_JSON    — התוכן של ~/.clasprc.json אחרי `clasp login`
+#   secret   CLASPRC_JSON    — התוכן של ~/.clasprc.json אחרי `clasp login` (clasp 3.x)
 #   variable APPS_SCRIPT_ID  — Project Settings → Script ID בעורך של Apps Script
 #
 # הפריסה מעדכנת את ה-deployment הקיים (המזהה נלקח מהכתובת שב-config.js),
@@ -29,20 +29,23 @@ jobs:
           node-version: 20
 
       - name: התקנת clasp
-        run: npm install -g @google/clasp@2.4.2
+        run: npm install -g @google/clasp@3.4.1
 
       - name: הרשאות
         env:
           CLASPRC_JSON: ${{ secrets.CLASPRC_JSON }}
           SCRIPT_ID: ${{ vars.APPS_SCRIPT_ID }}
         run: |
-          test -n "$CLASPRC_JSON" || { echo "::error::חסר ה-secret CLASPRC_JSON — ראו README"; exit 1; }
-          test -n "$SCRIPT_ID"    || { echo "::error::חסר ה-variable APPS_SCRIPT_ID — ראו README"; exit 1; }
+          if [ -z "$CLASPRC_JSON" ] || [ -z "$SCRIPT_ID" ]; then
+            echo "::warning::הפריסה האוטומטית לא הוגדרה (חסרים CLASPRC_JSON או APPS_SCRIPT_ID) — מדלגים. ראו README"
+            echo "SKIP=1" >> "$GITHUB_ENV"; exit 0
+          fi
           printf '%s' "$CLASPRC_JSON" > ~/.clasprc.json
 
       # מושכים את הפרויקט כמו שהוא (כולל appsscript.json וקבצים אחרים, אם יש),
       # ומחליפים רק את קובץ הקוד הראשי — כדי לא לדרוס הגדרות שנעשו בעורך.
       - name: משיכה, החלפת הקוד ודחיפה
+        if: env.SKIP != '1'
         env:
           SCRIPT_ID: ${{ vars.APPS_SCRIPT_ID }}
         run: |
@@ -56,8 +59,9 @@ jobs:
           clasp push --force
 
       - name: פריסת גרסה חדשה לכתובת הקיימת
+        if: env.SKIP != '1'
         run: |
           cd build
           DEPLOYMENT_ID=$(grep -o 'macros/s/[A-Za-z0-9_-]*' ../config.js | cut -d/ -f3)
           test -n "$DEPLOYMENT_ID" || { echo "::error::לא נמצא מזהה deployment ב-config.js"; exit 1; }
-          clasp deploy -i "$DEPLOYMENT_ID" -d "${GITHUB_SHA::7}"
+          clasp update-deployment "$DEPLOYMENT_ID" -d "${GITHUB_SHA::7}"

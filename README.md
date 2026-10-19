@@ -36,10 +36,12 @@
 הגדרה חד-פעמית:
 1. https://script.google.com/home/usersettings → להפעיל את Google Apps Script API
 2. במחשב (או ב-Google Cloud Shell, shell.cloud.google.com, שעובד גם מהטלפון):
-   `npx @google/clasp@2.4.2 login --no-localhost`, לאשר בדפדפן, ואז `cat ~/.clasprc.json`
+   `npx @google/clasp@3.4.1 login --no-localhost`, לאשר בדפדפן, ואז `cat ~/.clasprc.json`
 3. בריפו: Settings → Secrets and variables → Actions
    - Secrets → New repository secret: השם `CLASPRC_JSON`, הערך — כל התוכן של הקובץ מסעיף 2
-   - Variables → New repository variable: השם `APPS_SCRIPT_ID`, הערך — Project Settings → Script ID בעורך
+   - Variables → New repository variable: השם `APPS_SCRIPT_ID`, הערך `1bi0quvVKx-Kxzwm2kCm-1IoMz08lKUKJbpr7nSmmch-3Iml42Z71TDLo`
+
+בלי ההגדרה הזאת הפריסה האוטומטית מדלגת (אזהרה ב-Actions, לא כישלון).
 
 **כשהקוד צריך הרשאה חדשה מגוגל** (למשל טריגרים או שירות שלא היה בשימוש), הפריסה
 האוטומטית לא יכולה לאשר אותה: אחרי הפריסה צריך להריץ פונקציה אחת מהעורך (Run) ולאשר.
